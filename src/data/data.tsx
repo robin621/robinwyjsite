@@ -9,9 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
@@ -44,8 +42,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Robin Yajie Wang | International Political Economy',
+  description: 'Personal academic website for Robin Yajie Wang, Assistant Professor of International Political Economy.',
 };
 
 /**
@@ -69,25 +67,21 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Robin Yajie Wang.` ,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I am an <strong className="text-stone-100">Assistant Professor of International Political Economy</strong> in the Division of Global and Area Studies at <strong className="text-stone-100">The Chinese University of Hong Kong, Shenzhen</strong>.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        My research sits at the intersection of <strong className="text-stone-100">comparative political economy</strong>, <strong className="text-stone-100">international political economy</strong>, and <strong className="text-stone-100">Chinese politics</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
+      href: 'https://drive.google.com',
+      text: 'CV',
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
@@ -104,16 +98,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I received my Ph.D. in Political Science from Yale University, along with an M.A. in Statistics and Data Science. I also hold an M.Phil. in International Relations from the University of Oxford and a B.A. in English Literature from Beijing Foreign Studies University. I was a Yenching Scholar at Peking University and a Postdoctoral Fellow at Perry World House, University of Pennsylvania.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Shenzhen / Hong Kong', Icon: MapIcon},
+    {label: 'Current Role', text: 'Assistant Professor, CUHK-Shenzhen', Icon: CalendarIcon},
+    {label: 'Research Focus', text: 'Comparative & International Political Economy', Icon: FlagIcon},
+    {label: 'Methods', text: 'Quantitative + Qualitative, fieldwork, original data', Icon: SparklesIcon},
+    {label: 'PhD', text: 'Yale University, Political Science', Icon: AcademicCapIcon},
+    {label: 'Previous', text: 'Perry World House, University of Pennsylvania', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -336,27 +328,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'I welcome collaborations and inquiries on political economy, trade, and Chinese politics research.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'yajie.wang621@gmail.com',
+      href: 'mailto:yajie.wang621@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: '3803 Locust Walk, Philadelphia, PA 19104',
+      href: 'https://maps.google.com/?q=3803+Locust+Walk+Philadelphia+PA+19104',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.Phone,
+      text: '+1 203-909-3160',
+      href: 'tel:+12039093160',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Robin-Wang621',
+      href: 'https://github.com/Robin-Wang621',
     },
   ],
 };
@@ -365,9 +357,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Robin-Wang621'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://robin-yajiewang.com'},
 ];

@@ -66,6 +66,34 @@ Of course, all of the code is there and nothing is hidden from you so if you wou
 
 Deploying your new site to Vercel is simple, and can be done by following their guide [here.](https://vercel.com/guides/deploying-nextjs-with-vercel) When you're all done and the build succeeds, you should be given a url for your live site, go there and you'll see your new personal resume website! Congratulations!
 
+
+## Using This Structure for Your Own Website
+
+If your goal is to reuse this project as a foundation (not just a resume clone), this is the fastest path:
+
+1. **Keep the layout/components, replace content first**
+   - Update `src/data/data.tsx` with your own copy, links, and images.
+   - Keep the same object shape so the existing components continue to render correctly.
+2. **Treat sections as modules**
+   - The landing page is assembled in `src/pages/index.tsx` from reusable section components.
+   - Remove sections you do not need and duplicate/rename sections you do need.
+3. **Move reusable values into config**
+   - Centralize site-level values in `src/config.ts` (title, SEO values, route-level constants).
+4. **Replace visuals early**
+   - Swap images in `src/images/` and update imports in `data.tsx` immediately to make the site feel like yours.
+5. **Iterate safely**
+   - Run `yarn dev` while editing and `yarn build` before deploy to catch typing/build issues.
+
+### Suggested customization order
+
+1. Branding (name, logo/headshot, colors)
+2. Navigation + section order
+3. Content (about, projects, experience)
+4. Contact form provider integration
+5. SEO + deployment
+
+Following this order lets you get a working personal site quickly, then refine details without breaking the structure.
+
 ## Project Created & Maintained By
 
 ### Tim Baker
