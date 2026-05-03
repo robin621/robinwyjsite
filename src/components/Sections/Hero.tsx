@@ -8,7 +8,7 @@ import Section from '../Layout/Section';
 import Socials from '../Socials';
 
 const Hero: FC = memo(() => {
-  const {imageSrc, name, description, actions} = heroData;
+  const {imageSrc, profileImageSrc, name, description, actions} = heroData;
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
@@ -22,6 +22,15 @@ const Hero: FC = memo(() => {
         />
         <div className="z-10  max-w-screen-lg px-4 lg:px-0">
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
+            {profileImageSrc && (
+              <Image
+                alt={`${name}-profile`}
+                className="h-28 w-28 rounded-full border-2 border-white/70 object-cover shadow-md sm:h-32 sm:w-32"
+                placeholder="blur"
+                priority
+                src={profileImageSrc}
+              />
+            )}
             <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{name}</h1>
             {description}
             <div className="flex gap-x-4 text-neutral-100">
