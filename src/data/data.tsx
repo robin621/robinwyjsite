@@ -114,71 +114,27 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Research fields',
     skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
+      {name: 'Comparative Political Economy', level: 10},
+      {name: 'International Political Economy', level: 10},
+      {name: 'Chinese Politics', level: 9},
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Methods',
     skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
+      {name: 'Quantitative analysis', level: 9},
+      {name: 'Qualitative fieldwork', level: 8},
+      {name: 'Original data collection', level: 9},
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Current agendas',
     skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
+      {name: 'Fiscal centralization', level: 9},
+      {name: 'Trade shocks & sanctions', level: 9},
+      {name: 'Firm-state political economy', level: 8},
     ],
   },
 ];
@@ -188,69 +144,71 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Embedded State-Building: Economic Openness, Tax Structure and Fiscal Capacity in Contemporary China',
+    description:
+      "Working paper on how China's WTO-era openness incentivized fiscal centralization, tax bureaucracy expansion, and targeted redistribution to laid-off workers.",
+    url: 'https://papers.ssrn.com',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Strategic Liberalization: The Political Economy of Targeted Tariff Reductions in China',
+    description:
+      'Working paper on how centrally supervised and tax-compliant firms gained disproportionate access to tariff reductions during liberalization.',
+    url: 'https://papers.ssrn.com',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'How Great Power Competition Affects Public Support for High-Skilled Immigration',
+    description: 'Ongoing project with Jiahua Yue.',
+    url: 'https://robin-yajiewang.com/research-1',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'The Returns to Tax Compliance: How Chinese Firms Navigate Tax Reform',
+    description: 'Ongoing project with Xiaobo Lü.',
+    url: 'https://robin-yajiewang.com/research-1',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Fools Rush Out: Geopolitical Disruptions and Firm Overcompliance',
+    description: 'Ongoing project with Eric Keun Woo Jeong.',
+    url: 'https://robin-yajiewang.com/research-1',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'The Unlikely Alliance: How Chinese Exporters Navigate Trade Tensions Through International Alliance',
+    description: 'Ongoing project on exporter responses to trade tensions.',
+    url: 'https://robin-yajiewang.com/research-1',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Managing Openness in Hard Times: Export Slowdown and Bureaucratic Enforcement in China',
+    description: 'Ongoing project on enforcement and slowdown dynamics.',
+    url: 'https://robin-yajiewang.com/research-1',
     image: porfolioImage7,
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'China Tariff Policy Hub (CTPH)',
+    description: 'Dataset covering China tariff policy across instruments, HS-8 lines, and historical periods from pre-WTO to present.',
+    url: 'https://robin-yajiewang.com/data',
     image: porfolioImage8,
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'GB 1986 - 1994 - 2002 - 2007 - 2011 - 2017 - 2020',
+    description: 'Crosswalk resource listed on the data page.',
+    url: 'https://robin-yajiewang.com/data',
     image: porfolioImage9,
   },
   {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'GB - ISIC - HS',
+    description: 'Industry and product concordance resource.',
+    url: 'https://robin-yajiewang.com/data',
     image: porfolioImage10,
   },
   {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'China HS-10 Concordance',
+    description: 'Crosswalk/concordance resource for Chinese product coding.',
+    url: 'https://robin-yajiewang.com/data',
     image: porfolioImage11,
   },
 ];
@@ -260,41 +218,55 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Ph.D.',
+    location: 'Yale University',
+    title: 'Political Science',
+    content: <p>Ph.D. training in political science with focus on comparative and international political economy.</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'M.A.',
+    location: 'Yale University',
+    title: 'Statistics and Data Science',
+    content: <p>Formal training in statistical methods and empirical research design.</p>,
+  },
+  {
+    date: 'M.Phil.',
+    location: 'University of Oxford',
+    title: 'International Relations',
+    content: <p>Graduate study in international relations and global politics.</p>,
+  },
+  {
+    date: 'B.A.',
+    location: 'Beijing Foreign Studies University',
+    title: 'English Literature',
+    content: <p>Undergraduate degree in English literature.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
+    date: 'Current',
+    location: 'The Chinese University of Hong Kong, Shenzhen',
+    title: 'Assistant Professor of International Political Economy',
+    content: <p>Division of Global and Area Studies, School of Humanities and Social Science.</p>,
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
+    date: 'Previous',
+    location: 'Perry World House, University of Pennsylvania',
+    title: 'Postdoctoral Fellow / Research Fellow',
+    content: <p>Research on globalization, trade policy, and state capacity.</p>,
+  },
+  {
+    date: 'Previous',
+    location: 'Peking University',
+    title: 'Yenching Scholar',
+    content: <p>Academic fellowship focused on China-related scholarship.</p>,
+  },
+  {
+    date: 'Teaching',
+    location: 'Yale University',
+    title: 'Teaching Fellow',
+    content: <p>Supported courses including Game Theory & Political Science, Applied Quantitative Research Design, and International Relations.</p>,
   },
 ];
 
@@ -304,20 +276,11 @@ export const experience: TimelineItem[] = [
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
+    {name: 'Industrial Policy and Development', text: 'Course offering, Spring 2026.'},
+    {name: 'Social Science Research Methods', text: 'Course offering, Spring 2026.'},
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Teaching Fellow courses at Yale University',
+      text: 'Game Theory & Political Science; Applied Quantitative Research Design; Introduction to International Relations; The Rise of China; Foundations of Statistical Inference.',
     },
   ],
 };
