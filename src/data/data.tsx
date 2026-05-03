@@ -67,6 +67,7 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
+  profileImageSrc: profilepic,
   name: `I'm Robin Yajie Wang.` ,
   description: (
     <>
