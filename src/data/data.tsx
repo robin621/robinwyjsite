@@ -147,14 +147,14 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Embedded State-Building: Economic Openness, Tax Structure and Fiscal Capacity in Contemporary China',
     description:
       "Working paper on how China's WTO-era openness incentivized fiscal centralization, tax bureaucracy expansion, and targeted redistribution to laid-off workers.",
-    url: 'https://papers.ssrn.com',
+    url: 'https://robin-yajiewang.com/research-1',
     image: porfolioImage1,
   },
   {
     title: 'Strategic Liberalization: The Political Economy of Targeted Tariff Reductions in China',
     description:
       'Working paper on how centrally supervised and tax-compliant firms gained disproportionate access to tariff reductions during liberalization.',
-    url: 'https://papers.ssrn.com',
+    url: 'https://robin-yajiewang.com/research-1',
     image: porfolioImage2,
   },
   {
