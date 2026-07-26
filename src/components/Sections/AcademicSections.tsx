@@ -53,8 +53,20 @@ const workInProgress: AcademicItem[] = [
 
 const teachingItems: AcademicItem[] = [
   {
-    title: 'CUHK-Shenzhen - Assistant Professor',
-    description: 'Social Science Research Methods (Spring 2026); Industrial Policy and Development (Spring 2026)',
+    title: 'GLB5020 - Social Science Research Methods',
+    description: 'CUHK-Shenzhen, Spring 2026',
+    links: [
+      {label: 'Course page', href: 'https://www.cuhk.edu.cn/en/course/16138'},
+      {label: 'Syllabus', href: '/GLB5020_Social_Science_Research_Methods_Syllabus_Spring_2026.pdf'},
+    ],
+  },
+  {
+    title: 'GLB5880 - Industrial Policy and Economic Development',
+    description: 'CUHK-Shenzhen, Spring 2026',
+    links: [
+      {label: 'Course page', href: 'https://www.cuhk.edu.cn/en/course/17115'},
+      {label: 'Syllabus', href: '/GLB5880_Industrial_Policy_and_Economic_Development_Syllabus_Spring_2026.pdf'},
+    ],
   },
   {
     title: 'Yale University - Teaching Fellow',
@@ -81,8 +93,20 @@ const dataItems: AcademicItem[] = [
 
 const zhTeachingItems: AcademicItem[] = [
   {
-    title: '香港中文大学（深圳）— 助理教授',
-    description: '社会科学研究方法（2026年春季）；产业政策与发展（2026年春季）',
+    title: 'GLB5020 - 社会科学研究方法',
+    description: '香港中文大学（深圳），2026年春季',
+    links: [
+      {label: '课程页面', href: 'https://www.cuhk.edu.cn/zh-hans/course/16138'},
+      {label: '教学大纲', href: '/GLB5020_Social_Science_Research_Methods_Syllabus_Spring_2026.pdf'},
+    ],
+  },
+  {
+    title: 'GLB5880 - 产业政策与经济发展',
+    description: '香港中文大学（深圳），2026年春季',
+    links: [
+      {label: '课程页面', href: 'https://www.cuhk.edu.cn/zh-hans/course/17115'},
+      {label: '教学大纲', href: '/GLB5880_Industrial_Policy_and_Economic_Development_Syllabus_Spring_2026.pdf'},
+    ],
   },
   {
     title: '耶鲁大学 — 助教',
@@ -136,10 +160,26 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
           title={isZh ? '教学' : 'Teaching'}
         />
         <div className="divide-y divide-neutral-700 border-y border-neutral-700">
-          {currentTeachingItems.map(({title, description}) => (
+          {currentTeachingItems.map(({title, description, links}) => (
             <article className="grid gap-2 py-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10" key={title}>
               <h3 className="text-lg font-semibold text-white">{title}</h3>
-              <p className="text-sm leading-6 text-neutral-300">{description}</p>
+              <div>
+                <p className="text-sm leading-6 text-neutral-300">{description}</p>
+                {links && (
+                  <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                    {links.map(link => (
+                      <a
+                        className="font-medium text-white underline decoration-neutral-500 underline-offset-4 hover:decoration-white"
+                        href={link.href}
+                        key={link.label}
+                        rel="noreferrer"
+                        target="_blank">
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </article>
           ))}
         </div>
