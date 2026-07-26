@@ -21,7 +21,7 @@ export default class SiteDocument extends Document<DocumentProps> {
           <meta charSet="utf-8" />
           <meta content="notranslate" name="google" />
         </Head>
-        <body className="bg-neutral-950">
+        <body className="bg-black">
           <Main />
           <NextScript />
         </body>

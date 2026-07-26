@@ -9,7 +9,7 @@ import Section from '../Layout/Section';
 const About: FC<{data?: AboutData; heading?: string}> = memo(({data = aboutData, heading = 'About'}) => {
   const {profileImageSrc, description} = data;
   return (
-    <Section className="border-y border-neutral-800 bg-neutral-900" sectionId={SectionId.About}>
+    <Section className="border-y border-neutral-800 bg-black" sectionId={SectionId.About}>
       <div className={classNames('grid grid-cols-1 gap-y-8', {'md:grid-cols-4 md:gap-x-10': !!profileImageSrc})}>
         {!!profileImageSrc && (
           <div className="col-span-1 flex justify-center md:justify-start">

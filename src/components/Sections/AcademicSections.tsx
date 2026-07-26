@@ -114,7 +114,7 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
 
   return (
     <>
-      <Section className="bg-neutral-950" sectionId={SectionId.Research}>
+      <Section className="bg-black" sectionId={SectionId.Research}>
         <SectionHeading
           description={
             isZh
@@ -130,7 +130,7 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
         </div>
       </Section>
 
-      <Section className="border-y border-neutral-800 bg-neutral-900" sectionId={SectionId.Teaching}>
+      <Section className="border-y border-neutral-800 bg-black" sectionId={SectionId.Teaching}>
         <SectionHeading
           description={isZh ? '当前课程与过往教学经历。' : 'Current course offerings and previous teaching experience.'}
           title={isZh ? '教学' : 'Teaching'}
@@ -145,7 +145,7 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
         </div>
       </Section>
 
-      <Section className="bg-neutral-950" sectionId={SectionId.Data}>
+      <Section className="bg-black" sectionId={SectionId.Data}>
         <SectionHeading
           description={
             isZh

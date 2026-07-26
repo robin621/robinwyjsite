@@ -69,7 +69,7 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
     const inactiveClass = classNames(baseClass, 'text-neutral-400 hover:text-white');
     return (
       <header
-        className="fixed top-0 z-50 hidden w-full border-b border-neutral-800 bg-neutral-950/95 px-4 py-3 backdrop-blur sm:block"
+        className="fixed top-0 z-50 hidden w-full border-b border-neutral-800 bg-black/95 px-4 py-3 backdrop-blur sm:block"
         id={headerID}>
         <nav className="flex justify-center gap-x-8">
           {navSections.map(section => (
@@ -106,7 +106,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null;
       <>
         <button
           aria-label="Menu Button"
-          className="fixed right-3 top-3 z-40 rounded-md border border-neutral-700 bg-neutral-950 p-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 sm:hidden"
+          className="fixed right-3 top-3 z-40 rounded-md border border-neutral-700 bg-black p-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:hidden"
           onClick={toggleOpen}>
           <Bars3BottomRightIcon className="h-7 w-7" />
           <span className="sr-only">Open sidebar</span>
@@ -121,7 +121,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null;
               leave="transition-opacity ease-linear duration-300"
               leaveFrom="opacity-100"
               leaveTo="opacity-0">
-              <Dialog.Overlay className="fixed inset-0 bg-neutral-950/50" />
+              <Dialog.Overlay className="fixed inset-0 bg-black/50" />
             </Transition.Child>
             <Transition.Child
               as={Fragment}
@@ -131,7 +131,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null;
               leave="transition ease-in-out duration-300 transform"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full">
-              <div className="relative w-4/5 max-w-xs border-r border-neutral-800 bg-neutral-950">
+              <div className="relative w-4/5 max-w-xs border-r border-neutral-800 bg-black">
                 <nav className="mt-16 flex flex-col px-5">
                   {navSections.map(section => (
                     <NavItem

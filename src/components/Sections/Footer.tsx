@@ -5,7 +5,7 @@ import {SectionId} from '../../data/data';
 import Socials from '../Socials';
 
 const Footer: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => (
-  <div className="relative border-t border-neutral-800 bg-neutral-950 px-4 pb-6 pt-12 sm:px-8 sm:pb-8 sm:pt-14">
+  <div className="relative border-t border-neutral-800 bg-black px-4 pb-6 pt-12 sm:px-8 sm:pb-8 sm:pt-14">
     <div className="absolute inset-x-0 -top-4 flex justify-center sm:-top-6">
       <a
         className="rounded-md border border-neutral-300 bg-white p-1 text-neutral-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-950 sm:p-2"

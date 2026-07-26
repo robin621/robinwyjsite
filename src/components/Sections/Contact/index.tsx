@@ -27,7 +27,7 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
 const Contact: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
   const {headerText, description, items} = locale === 'zh' ? zhContact : contact;
   return (
-    <Section className="bg-neutral-950" sectionId={SectionId.Contact}>
+    <Section className="bg-black" sectionId={SectionId.Contact}>
       <div className="flex flex-col gap-y-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <EnvelopeIcon className="hidden h-12 w-12 text-white md:block" />

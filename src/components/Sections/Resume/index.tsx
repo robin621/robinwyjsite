@@ -30,7 +30,7 @@ const Resume: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
   const currentAwards = isZh ? zhAwards : awards;
 
   return (
-    <Section className="border-y border-neutral-800 bg-neutral-900" sectionId={SectionId.Resume}>
+    <Section className="border-y border-neutral-800 bg-black" sectionId={SectionId.Resume}>
       <div className="flex flex-col divide-y divide-neutral-700">
         <ResumeSection title={isZh ? '任职经历' : 'Appointments'}>
           {currentExperience.map((item, index) => (
