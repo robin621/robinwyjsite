@@ -9,10 +9,41 @@ import {useNavObserver} from '../../hooks/useNavObserver';
 
 export const headerID = 'headerNav';
 
-const Header: FC = memo(() => {
+type Locale = 'en' | 'zh';
+
+const navLabels: Record<Locale, Record<SectionId, string>> = {
+  en: {
+    [SectionId.About]: 'About',
+    [SectionId.Contact]: 'Contact',
+    [SectionId.Data]: 'Data',
+    [SectionId.Hero]: 'Home',
+    [SectionId.Portfolio]: 'Portfolio',
+    [SectionId.Research]: 'Research',
+    [SectionId.Resume]: 'Resume',
+    [SectionId.Skills]: 'Skills',
+    [SectionId.Stats]: 'Stats',
+    [SectionId.Teaching]: 'Teaching',
+    [SectionId.Testimonials]: 'Testimonials',
+  },
+  zh: {
+    [SectionId.About]: '简介',
+    [SectionId.Contact]: '联系',
+    [SectionId.Data]: '数据',
+    [SectionId.Hero]: '首页',
+    [SectionId.Portfolio]: '项目',
+    [SectionId.Research]: '研究',
+    [SectionId.Resume]: '履历',
+    [SectionId.Skills]: '技能',
+    [SectionId.Stats]: '统计',
+    [SectionId.Teaching]: '教学',
+    [SectionId.Testimonials]: '推荐',
+  },
+};
+
+const Header: FC<{locale?: Locale}> = memo(({locale = 'en'}) => {
   const [currentSection, setCurrentSection] = useState<SectionId | null>(null);
   const navSections = useMemo(
-    () => [SectionId.About, SectionId.Resume, SectionId.Portfolio, SectionId.Testimonials, SectionId.Contact],
+    () => [SectionId.About, SectionId.Research, SectionId.Teaching, SectionId.Data, SectionId.Contact],
     [],
   );
 
@@ -24,20 +55,22 @@ const Header: FC = memo(() => {
 
   return (
     <>
-      <MobileNav currentSection={currentSection} navSections={navSections} />
-      <DesktopNav currentSection={currentSection} navSections={navSections} />
+      <MobileNav currentSection={currentSection} locale={locale} navSections={navSections} />
+      <DesktopNav currentSection={currentSection} locale={locale} navSections={navSections} />
     </>
   );
 });
 
-const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}> = memo(
-  ({navSections, currentSection}) => {
+const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null; locale: Locale}> = memo(
+  ({navSections, currentSection, locale}) => {
     const baseClass =
-      '-m-1.5 p-1.5 rounded-md font-bold first-letter:uppercase hover:transition-colors hover:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 sm:hover:text-orange-500 text-neutral-100';
-    const activeClass = classNames(baseClass, 'text-orange-500');
-    const inactiveClass = classNames(baseClass, 'text-neutral-100');
+      'border-b border-transparent px-1 py-2 text-sm font-medium first-letter:uppercase transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white';
+    const activeClass = classNames(baseClass, 'border-white text-white');
+    const inactiveClass = classNames(baseClass, 'text-neutral-400 hover:text-white');
     return (
-      <header className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 p-4 backdrop-blur sm:block" id={headerID}>
+      <header
+        className="fixed top-0 z-50 hidden w-full border-b border-neutral-800 bg-neutral-950/95 px-4 py-3 backdrop-blur sm:block"
+        id={headerID}>
         <nav className="flex justify-center gap-x-8">
           {navSections.map(section => (
             <NavItem
@@ -45,17 +78,20 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
               current={section === currentSection}
               inactiveClass={inactiveClass}
               key={section}
+              label={navLabels[locale][section]}
+              locale={locale}
               section={section}
             />
           ))}
+          <LanguageSwitch locale={locale} />
         </nav>
       </header>
     );
   },
 );
 
-const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}> = memo(
-  ({navSections, currentSection}) => {
+const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null; locale: Locale}> = memo(
+  ({navSections, currentSection, locale}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const toggleOpen = useCallback(() => {
@@ -63,16 +99,16 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
     }, [isOpen]);
 
     const baseClass =
-      'p-2 rounded-md first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500';
-    const activeClass = classNames(baseClass, 'bg-neutral-900 text-white font-bold');
-    const inactiveClass = classNames(baseClass, 'text-neutral-200 font-medium');
+      'border-b border-neutral-800 px-2 py-3 first-letter:uppercase transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white';
+    const activeClass = classNames(baseClass, 'font-semibold text-white');
+    const inactiveClass = classNames(baseClass, 'font-medium text-neutral-400');
     return (
       <>
         <button
           aria-label="Menu Button"
-          className="fixed right-2 top-2 z-40 rounded-md bg-orange-500 p-2 ring-offset-gray-800/60 hover:bg-orange-400 focus:outline-none focus:ring-0 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 sm:hidden"
+          className="fixed right-3 top-3 z-40 rounded-md border border-neutral-700 bg-neutral-950 p-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 sm:hidden"
           onClick={toggleOpen}>
-          <Bars3BottomRightIcon className="h-8 w-8 text-white" />
+          <Bars3BottomRightIcon className="h-7 w-7" />
           <span className="sr-only">Open sidebar</span>
         </button>
         <Transition.Root as={Fragment} show={isOpen}>
@@ -85,7 +121,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
               leave="transition-opacity ease-linear duration-300"
               leaveFrom="opacity-100"
               leaveTo="opacity-0">
-              <Dialog.Overlay className="fixed inset-0 bg-stone-900 bg-opacity-75" />
+              <Dialog.Overlay className="fixed inset-0 bg-neutral-950/50" />
             </Transition.Child>
             <Transition.Child
               as={Fragment}
@@ -95,18 +131,21 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
               leave="transition ease-in-out duration-300 transform"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full">
-              <div className="relative w-4/5 bg-stone-800">
-                <nav className="mt-5 flex flex-col gap-y-2 px-2">
+              <div className="relative w-4/5 max-w-xs border-r border-neutral-800 bg-neutral-950">
+                <nav className="mt-16 flex flex-col px-5">
                   {navSections.map(section => (
                     <NavItem
                       activeClass={activeClass}
                       current={section === currentSection}
                       inactiveClass={inactiveClass}
                       key={section}
+                      label={navLabels[locale][section]}
+                      locale={locale}
                       onClick={toggleOpen}
                       section={section}
                     />
                   ))}
+                  <LanguageSwitch locale={locale} onClick={toggleOpen} />
                 </nav>
               </div>
             </Transition.Child>
@@ -122,18 +161,31 @@ const NavItem: FC<{
   current: boolean;
   activeClass: string;
   inactiveClass: string;
+  label: string;
+  locale: Locale;
   onClick?: () => void;
-}> = memo(({section, current, inactiveClass, activeClass, onClick}) => {
+}> = memo(({section, current, inactiveClass, activeClass, label, locale, onClick}) => {
   return (
     <Link
       className={classNames(current ? activeClass : inactiveClass)}
-      href={`/#${section}`}
+      href={`${locale === 'zh' ? '/zh/' : '/'}#${section}`}
       key={section}
       onClick={onClick}>
-      {section}
+      {label}
     </Link>
   );
 });
 
+const LanguageSwitch: FC<{locale: Locale; onClick?: () => void}> = memo(({locale, onClick}) => (
+  <Link
+    aria-label={locale === 'zh' ? 'Switch to English' : '切换至中文'}
+    className="border-l border-neutral-700 pl-6 text-sm font-semibold text-white hover:text-neutral-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+    href={locale === 'zh' ? '/' : '/zh/'}
+    onClick={onClick}>
+    {locale === 'zh' ? 'EN' : '中文'}
+  </Link>
+));
+
 Header.displayName = 'Header';
+LanguageSwitch.displayName = 'LanguageSwitch';
 export default Header;

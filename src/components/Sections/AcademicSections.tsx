@@ -1,0 +1,211 @@
+import {FC, memo} from 'react';
+
+import {SectionId} from '../../data/data';
+import Section from '../Layout/Section';
+
+type AcademicItem = {
+  title: string;
+  description: string;
+  links?: {label: string; href: string}[];
+};
+
+const dissertationItems: AcademicItem[] = [
+  {
+    title: 'The Fiscal Politics of Economic Openness in Contemporary China',
+    description: '',
+  },
+];
+
+const workingPapers: AcademicItem[] = [
+  {
+    title:
+      'Embedded Fiscal Centralization: How Economic Openness Increased Fiscal Capacity and Redistribution in Contemporary China',
+    description: 'CPS Revise & Resubmit',
+  },
+  {
+    title: 'Strategic Liberalization: The Political Economy of Targeted Tariff Reductions in China',
+    description: 'ISQ Revise & Resubmit',
+  },
+];
+
+const workInProgress: AcademicItem[] = [
+  {
+    title: 'The Returns to Tax Compliance: How Chinese Firms Navigate Tax Reform',
+    description: 'With Xiaobo Lü',
+  },
+  {
+    title: 'Vying for Soft Power: How Great Power Competition Affects Public Support for High-Skilled Immigration',
+    description: 'With Jiahua Yue',
+  },
+  {
+    title: "Reading the State's Mind: Nuclear Sanctions and Heterogeneous Firm Response",
+    description: 'With Eric Jeong',
+  },
+  {
+    title: 'The Unlikely Alliance: How Chinese Exporters Navigate Trade Tensions Through International Alliance',
+    description: 'Work in progress',
+  },
+  {
+    title: 'Managing Openness in Hard Times: Export Slowdown and Bureaucratic Enforcement in China',
+    description: 'Work in progress',
+  },
+];
+
+const teachingItems: AcademicItem[] = [
+  {
+    title: 'CUHK-Shenzhen - Assistant Professor',
+    description: 'Social Science Research Methods (Spring 2026); Industrial Policy and Development (Spring 2026)',
+  },
+  {
+    title: 'Yale University - Teaching Fellow',
+    description:
+      'Game Theory and Political Science (Spring 2024); Applied Quantitative Research Design (Fall 2023); Introduction to International Relations (Spring 2023, Spring 2021); The Rise of China (Fall 2022); Fundamentals of Statistical Inference (Fall 2020)',
+  },
+  {
+    title: 'Beijing Foreign Studies University - Co-Instructor',
+    description: 'Introduction to Research Methods (Spring 2022)',
+  },
+];
+
+const dataItems: AcademicItem[] = [
+  {
+    title: 'gbcrosswalk',
+    description:
+      'R package for cleaning, building, and composing crosswalks between Chinese GB/T 4754 industry classification vintages, including 1986, 1994, 2002, 2011, and 2017.',
+    links: [
+      {label: 'CRAN', href: 'https://CRAN.R-project.org/package=gbcrosswalk'},
+      {label: 'GitHub', href: 'https://github.com/robin621/gbcrosswalk'},
+    ],
+  },
+];
+
+const zhTeachingItems: AcademicItem[] = [
+  {
+    title: '香港中文大学（深圳）— 助理教授',
+    description: '社会科学研究方法（2026年春季）；产业政策与发展（2026年春季）',
+  },
+  {
+    title: '耶鲁大学 — 助教',
+    description:
+      '博弈论与政治学（2024年春季）；应用定量研究设计（2023年秋季）；国际关系导论（2023年春季、2021年春季）；中国的崛起（2022年秋季）；统计推断基础（2020年秋季）',
+  },
+  {
+    title: '北京外国语大学 — 合作授课教师',
+    description: '研究方法导论（2022年春季）',
+  },
+];
+
+const zhDataItems: AcademicItem[] = [
+  {
+    title: 'gbcrosswalk',
+    description:
+      '用于清理、构建和组合中国 GB/T 4754 行业分类跨年份对照表的 R 软件包，涵盖1986、1994、2002、2011和2017年版本。',
+    links: [
+      {label: 'CRAN', href: 'https://CRAN.R-project.org/package=gbcrosswalk'},
+      {label: 'GitHub', href: 'https://github.com/robin621/gbcrosswalk'},
+    ],
+  },
+];
+
+const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
+  const isZh = locale === 'zh';
+  const currentTeachingItems = isZh ? zhTeachingItems : teachingItems;
+  const currentDataItems = isZh ? zhDataItems : dataItems;
+
+  return (
+    <>
+      <Section className="bg-neutral-950" sectionId={SectionId.Research}>
+        <SectionHeading
+          description={
+            isZh
+              ? '国际关系、政治经济学与比较政治领域的博士论文、工作论文与在研项目。'
+              : 'Dissertation, working papers, and ongoing projects in international relations, political economy, and comparative politics.'
+          }
+          title={isZh ? '研究' : 'Research'}
+        />
+        <div className="space-y-12">
+          <ResearchGroup items={dissertationItems} title={isZh ? '博士论文' : 'Dissertation'} />
+          <ResearchGroup items={workingPapers} title={isZh ? '工作论文' : 'Working Papers'} />
+          <ResearchGroup items={workInProgress} title={isZh ? '在研项目' : 'Work in Progress'} />
+        </div>
+      </Section>
+
+      <Section className="border-y border-neutral-800 bg-neutral-900" sectionId={SectionId.Teaching}>
+        <SectionHeading
+          description={isZh ? '当前课程与过往教学经历。' : 'Current course offerings and previous teaching experience.'}
+          title={isZh ? '教学' : 'Teaching'}
+        />
+        <div className="divide-y divide-neutral-700 border-y border-neutral-700">
+          {currentTeachingItems.map(({title, description}) => (
+            <article className="grid gap-2 py-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10" key={title}>
+              <h3 className="text-lg font-semibold text-white">{title}</h3>
+              <p className="text-sm leading-6 text-neutral-300">{description}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="bg-neutral-950" sectionId={SectionId.Data}>
+        <SectionHeading
+          description={
+            isZh
+              ? '服务于中国与国际贸易研究的数据及分类对照资源。'
+              : 'Original datasets and concordance resources for research on China and international trade.'
+          }
+          title={isZh ? '数据' : 'Data'}
+        />
+        <div className="divide-y divide-neutral-700 border-y border-neutral-700">
+          {currentDataItems.map(({title, description, links}) => (
+            <article className="grid gap-2 py-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10" key={title}>
+              <h3 className="text-lg font-semibold text-white">{title}</h3>
+              <div>
+                <p className="text-sm leading-6 text-neutral-300">{description}</p>
+                {links && (
+                  <div className="mt-3 flex gap-5 text-sm">
+                    {links.map(link => (
+                      <a
+                        className="font-medium text-white underline decoration-neutral-500 underline-offset-4 hover:decoration-white"
+                        href={link.href}
+                        key={link.label}
+                        rel="noreferrer"
+                        target="_blank">
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+    </>
+  );
+});
+
+const ResearchGroup: FC<{title: string; items: AcademicItem[]}> = memo(({title, items}) => (
+  <div>
+    <h3 className="mb-3 text-sm font-semibold uppercase text-neutral-400">{title}</h3>
+    <div className="divide-y divide-neutral-700 border-y border-neutral-700">
+      {items.map(({title: itemTitle, description}) => (
+        <article className="grid gap-2 py-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:gap-10" key={itemTitle}>
+          <h4 className="text-lg font-semibold text-white">{itemTitle}</h4>
+          {description && <p className="text-sm leading-6 text-neutral-300">{description}</p>}
+        </article>
+      ))}
+    </div>
+  </div>
+));
+
+const SectionHeading: FC<{title: string; description: string}> = memo(({title, description}) => (
+  <div className="mb-10 grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10">
+    <h2 className="text-3xl font-semibold text-white">{title}</h2>
+    <p className="max-w-2xl leading-7 text-neutral-300">{description}</p>
+  </div>
+));
+
+AcademicSections.displayName = 'AcademicSections';
+ResearchGroup.displayName = 'ResearchGroup';
+SectionHeading.displayName = 'SectionHeading';
+
+export default AcademicSections;

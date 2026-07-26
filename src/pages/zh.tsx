@@ -8,24 +8,26 @@ import Contact from '../components/Sections/Contact';
 import Footer from '../components/Sections/Footer';
 import Hero from '../components/Sections/Hero';
 import Resume from '../components/Sections/Resume';
-import {homePageMeta} from '../data/data';
+import {zhAboutData, zhHeroData, zhHomePageMeta} from '../data/zhData';
 
 // eslint-disable-next-line react-memo/require-memo
 const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
 
-const Home: FC = memo(() => {
-  const {title, description} = homePageMeta;
+const ChineseHome: FC = memo(() => {
+  const {title, description} = zhHomePageMeta;
+
   return (
-    <Page description={description} locale="en" title={title}>
-      <Header locale="en" />
-      <Hero />
-      <About />
-      <AcademicSections />
-      <Resume />
-      <Contact />
-      <Footer />
+    <Page description={description} locale="zh" title={title}>
+      <Header locale="zh" />
+      <Hero data={zhHeroData} locale="zh" />
+      <About data={zhAboutData} heading="个人简介" />
+      <AcademicSections locale="zh" />
+      <Resume locale="zh" />
+      <Contact locale="zh" />
+      <Footer locale="zh" />
     </Page>
   );
 });
 
-export default Home;
+ChineseHome.displayName = 'ChineseHome';
+export default ChineseHome;

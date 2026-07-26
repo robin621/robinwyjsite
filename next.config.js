@@ -25,7 +25,6 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: true,
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
     unoptimized: true,
   },
 };

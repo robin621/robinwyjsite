@@ -6,7 +6,8 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: FC = memo(() => {
+const ContactForm: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
+  const isZh = locale === 'zh';
   const defaultData = useMemo(
     () => ({
       name: '',
@@ -41,17 +42,24 @@ const ContactForm: FC = memo(() => {
   );
 
   const inputClasses =
-    'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
+    'rounded-md border border-neutral-700 bg-neutral-900 text-sm text-white placeholder:text-sm placeholder:text-neutral-500 focus:border-white focus:outline-none focus:ring-1 focus:ring-white';
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+      <input
+        className={inputClasses}
+        name="name"
+        onChange={onChange}
+        placeholder={isZh ? '姓名' : 'Name'}
+        required
+        type="text"
+      />
       <input
         autoComplete="email"
         className={inputClasses}
         name="email"
         onChange={onChange}
-        placeholder="Email"
+        placeholder={isZh ? '电子邮箱' : 'Email'}
         required
         type="email"
       />
@@ -60,15 +68,15 @@ const ContactForm: FC = memo(() => {
         maxLength={250}
         name="message"
         onChange={onChange}
-        placeholder="Message"
+        placeholder={isZh ? '留言' : 'Message'}
         required
         rows={6}
       />
       <button
-        aria-label="Submit contact form"
-        className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+        aria-label={isZh ? '提交联系表单' : 'Submit contact form'}
+        className="w-max rounded-md border border-white bg-white px-5 py-2.5 text-sm font-medium text-neutral-950 outline-none hover:bg-neutral-200 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-950"
         type="submit">
-        Send Message
+        {isZh ? '发送留言' : 'Send Message'}
       </button>
     </form>
   );

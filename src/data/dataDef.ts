@@ -40,14 +40,7 @@ interface HeroActionItem {
  */
 export interface About {
   profileImageSrc?: string;
-  description: string;
-  aboutItems: AboutItem[];
-}
-
-export interface AboutItem {
-  label: string;
-  text: string;
-  Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
+  description: string[];
 }
 
 /**
@@ -128,7 +121,7 @@ export const ContactType = {
   Instagram: 'Instagram',
 } as const;
 
-export type ContactType = typeof ContactType[keyof typeof ContactType];
+export type ContactType = (typeof ContactType)[keyof typeof ContactType];
 
 export interface ContactItem {
   type: ContactType;

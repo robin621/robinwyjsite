@@ -1,24 +1,31 @@
-import {Head, Html, Main, NextScript} from 'next/document';
+import Document, {DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript} from 'next/document';
 
-// next/document <Head /> vs next/head <Head />
-//
-// next/document Head is rendered once on the server. This is different from next/head which will
-// rebuild the next/head fields each time it's called, and won't overwrite next/document's Head.
+interface DocumentProps extends DocumentInitialProps {
+  lang: string;
+}
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head>
-        <meta charSet="utf-8" />
-        {/* google translate breaks react:
-          - https://github.com/facebook/react/issues/11538
-          - https://bugs.chromium.org/p/chromium/issues/detail?id=872770 */}
-        <meta content="notranslate" name="google" />
-      </Head>
-      <body className="bg-black">
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  );
+export default class SiteDocument extends Document<DocumentProps> {
+  static async getInitialProps(context: DocumentContext): Promise<DocumentProps> {
+    const initialProps = await Document.getInitialProps(context);
+
+    return {
+      ...initialProps,
+      lang: context.pathname.startsWith('/zh') ? 'zh-CN' : 'en',
+    };
+  }
+
+  render() {
+    return (
+      <Html lang={this.props.lang}>
+        <Head>
+          <meta charSet="utf-8" />
+          <meta content="notranslate" name="google" />
+        </Head>
+        <body className="bg-neutral-950">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
