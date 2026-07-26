@@ -60,37 +60,37 @@ export const zhEducation: TimelineItem[] = [
     date: '2025年5月',
     location: '耶鲁大学',
     title: '政治学博士',
-    content: <p>研究领域：国际关系、政治经济学与比较政治。</p>,
+    content: <p>研究领域：国际关系、政治经济学与比较政治</p>,
   },
   {
     date: '2021年',
     location: '耶鲁大学',
     title: '统计与数据科学文学硕士',
-    content: <p>统计与数据科学研究生学位。</p>,
+    content: <p>统计与数据科学研究生学位</p>,
   },
   {
     date: '2021年',
     location: '耶鲁大学',
     title: '政治学哲学硕士',
-    content: <p>政治学研究生学位。</p>,
+    content: <p>政治学研究生学位</p>,
   },
   {
     date: '2018年',
     location: '牛津大学',
     title: '国际关系哲学硕士',
-    content: <p>国际关系研究生学位。</p>,
+    content: <p>国际关系研究生学位</p>,
   },
   {
     date: '2015-2016年',
     location: '北京大学',
     title: '燕京学者',
-    content: <p>北京大学燕京学堂学者。</p>,
+    content: <p>北京大学燕京学堂学者</p>,
   },
   {
     date: '2015年',
     location: '北京外国语大学',
     title: '英语文学学士',
-    content: <p>英语文学本科学位。</p>,
+    content: <p>英语文学本科学位</p>,
   },
 ];
 
@@ -99,13 +99,13 @@ export const zhExperience: TimelineItem[] = [
     date: '2026年1月至今',
     location: '香港中文大学（深圳）',
     title: '助理教授',
-    content: <p>人文社会科学学院全球与区域研究学科部。</p>,
+    content: <p>人文社会科学学院全球与区域研究学科部</p>,
   },
   {
     date: '2024年8月-2026年1月',
     location: '宾夕法尼亚大学',
     title: '研究员',
-    content: <p>Perry World House.</p>,
+    content: <p>Perry World House</p>,
   },
 ];
 
