@@ -24,6 +24,12 @@ export default class SiteDocument extends Document<DocumentProps> {
         <body className="bg-black">
           <Main />
           <NextScript />
+          <script
+            async
+            data-cf-beacon='{"token":"c7a6c29d54a14b54a71b0a8a690518e4"}'
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            type="module"
+          />
         </body>
       </Html>
     );
