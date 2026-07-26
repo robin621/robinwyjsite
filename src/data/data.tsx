@@ -357,8 +357,8 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Github,
-      text: 'Robin-Wang621',
-      href: 'https://github.com/Robin-Wang621',
+      text: 'robin621',
+      href: 'https://github.com/robin621',
     },
   ],
 };
@@ -367,6 +367,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Robin-Wang621'},
+  {label: 'GitHub', Icon: GithubIcon, href: 'https://github.com/robin621'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com'},
 ];

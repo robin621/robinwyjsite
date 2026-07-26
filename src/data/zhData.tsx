@@ -156,8 +156,8 @@ export const zhContact: ContactSection = {
     },
     {
       type: ContactType.Github,
-      text: 'Robin-Wang621',
-      href: 'https://github.com/Robin-Wang621',
+      text: 'robin621',
+      href: 'https://github.com/robin621',
     },
   ],
 };
