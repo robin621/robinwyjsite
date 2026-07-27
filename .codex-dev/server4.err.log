@@ -1,0 +1,50 @@
+'yarn' is not recognized as an internal or external command,
+operable program or batch file.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at eval (webpack-internal:///./node_modules/next/dist/client/image-component.js:131:11)
+    at eval (webpack-internal:///./node_modules/next/dist/client/image-component.js:238:47)
+    at div
+    at div
+    at div
+    at div
+    at section
+    at eval (webpack-internal:///./src/components/Layout/Section.tsx:14:78)
+    at Hero
+    at eval (webpack-internal:///./src/components/Layout/Page.tsx:17:75)
+    at eval (webpack-internal:///./src/pages/_app.tsx:17:76)
+    at StyleRegistry (D:\github\robinwyjsite\node_modules\styled-jsx\dist\index\index.js:449:36)
+    at ek (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:30:13126)
+    at eY (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:39:1766)
+    at eV (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:39:3110)
+    at div
+    at e1 (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:48:761)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+'yarn' is not recognized as an internal or external command,
+operable program or batch file.
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+'yarn' is not recognized as an internal or external command,
+operable program or batch file.
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at eval (webpack-internal:///./node_modules/next/dist/client/image-component.js:131:11)
+    at eval (webpack-internal:///./node_modules/next/dist/client/image-component.js:238:47)
+    at div
+    at div
+    at div
+    at div
+    at section
+    at eval (webpack-internal:///./src/components/Layout/Section.tsx:14:78)
+    at Hero
+    at eval (webpack-internal:///./src/components/Layout/Page.tsx:17:75)
+    at eval (webpack-internal:///./src/pages/_app.tsx:17:76)
+    at StyleRegistry (D:\github\robinwyjsite\node_modules\styled-jsx\dist\index\index.js:449:36)
+    at ek (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:30:13126)
+    at eY (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:39:1766)
+    at eV (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:39:3110)
+    at div
+    at e1 (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:48:761)

@@ -1,0 +1,107 @@
+'yarn' is not recognized as an internal or external command,
+operable program or batch file.
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at eval (webpack-internal:///./node_modules/next/dist/client/image-component.js:131:11)
+    at eval (webpack-internal:///./node_modules/next/dist/client/image-component.js:238:47)
+    at div
+    at div
+    at div
+    at div
+    at section
+    at eval (webpack-internal:///./src/components/Layout/Section.tsx:14:78)
+    at eval (webpack-internal:///./src/components/Sections/Hero.tsx:25:75)
+    at eval (webpack-internal:///./src/components/Layout/Page.tsx:17:75)
+    at eval (webpack-internal:///./src/pages/_app.tsx:17:76)
+    at StyleRegistry (D:\github\robinwyjsite\node_modules\styled-jsx\dist\index\index.js:449:36)
+    at ek (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:30:13126)
+    at eY (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:39:1766)
+    at eV (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:39:3110)
+    at div
+    at e1 (D:\github\robinwyjsite\node_modules\next\dist\compiled\next-server\pages.runtime.dev.js:48:761)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ Error: Cannot find module './chunks/vendor-chunks/next.js'
+Require stack:
+- D:\github\robinwyjsite\.next\server\webpack-runtime.js
+- D:\github\robinwyjsite\.next\server\pages\_document.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\require.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\load-components.js
+- D:\github\robinwyjsite\node_modules\next\dist\build\utils.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\lib\router-server.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)
+    at D:\github\robinwyjsite\node_modules\next\dist\server\require-hook.js:54:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)
+    at Module._load (node:internal/modules/cjs/loader:1242:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+    at mod.require (D:\github\robinwyjsite\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1899)
+    at D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1134
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1095)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1542) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\github\\robinwyjsite\\.next\\server\\webpack-runtime.js',
+    'D:\\github\\robinwyjsite\\.next\\server\\pages\\_document.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ],
+  page: '/zh'
+}
+Error: Cannot find module './chunks/vendor-chunks/next.js'
+Require stack:
+- D:\github\robinwyjsite\.next\server\webpack-runtime.js
+- D:\github\robinwyjsite\.next\server\pages\_document.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\require.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\load-components.js
+- D:\github\robinwyjsite\node_modules\next\dist\build\utils.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\lib\router-server.js
+- D:\github\robinwyjsite\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)
+    at D:\github\robinwyjsite\node_modules\next\dist\server\require-hook.js:54:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)
+    at Module._load (node:internal/modules/cjs/loader:1242:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+    at mod.require (D:\github\robinwyjsite\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1899)
+    at D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1134
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1095)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (D:\github\robinwyjsite\.next\server\webpack-runtime.js:1:1542) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\github\\robinwyjsite\\.next\\server\\webpack-runtime.js',
+    'D:\\github\\robinwyjsite\\.next\\server\\pages\\_document.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\github\\robinwyjsite\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload

@@ -26,6 +26,10 @@ const workingPapers: AcademicItem[] = [
     title: 'Strategic Liberalization: The Political Economy of Targeted Tariff Reductions in China',
     description: 'ISQ Revise & Resubmit',
   },
+  {
+    title: 'The Politics of Deglobalization: Trade Shocks and Divergent Local Government Responses in China',
+    description: '',
+  },
 ];
 
 const workInProgress: AcademicItem[] = [
