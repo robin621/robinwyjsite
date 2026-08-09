@@ -1,5 +1,5 @@
 import {Dialog, Transition} from '@headlessui/react';
-import {Bars3BottomRightIcon} from '@heroicons/react/24/outline';
+import {Bars3BottomRightIcon, XMarkIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Link from 'next/link';
 import {FC, Fragment, memo, useCallback, useMemo, useState} from 'react';
@@ -17,33 +17,32 @@ const navLabels: Record<Locale, Record<SectionId, string>> = {
     [SectionId.Contact]: 'Contact',
     [SectionId.Data]: 'Data',
     [SectionId.Hero]: 'Home',
-    [SectionId.Portfolio]: 'Portfolio',
     [SectionId.Research]: 'Research',
-    [SectionId.Resume]: 'Resume',
-    [SectionId.Skills]: 'Skills',
-    [SectionId.Stats]: 'Stats',
+    [SectionId.Resume]: 'CV',
     [SectionId.Teaching]: 'Teaching',
-    [SectionId.Testimonials]: 'Testimonials',
   },
   zh: {
     [SectionId.About]: '简介',
     [SectionId.Contact]: '联系',
     [SectionId.Data]: '数据',
     [SectionId.Hero]: '首页',
-    [SectionId.Portfolio]: '项目',
     [SectionId.Research]: '研究',
     [SectionId.Resume]: '履历',
-    [SectionId.Skills]: '技能',
-    [SectionId.Stats]: '统计',
     [SectionId.Teaching]: '教学',
-    [SectionId.Testimonials]: '推荐',
   },
 };
 
 const Header: FC<{locale?: Locale}> = memo(({locale = 'en'}) => {
   const [currentSection, setCurrentSection] = useState<SectionId | null>(null);
   const navSections = useMemo(
-    () => [SectionId.About, SectionId.Research, SectionId.Teaching, SectionId.Data, SectionId.Contact],
+    () => [
+      SectionId.About,
+      SectionId.Research,
+      SectionId.Teaching,
+      SectionId.Data,
+      SectionId.Resume,
+      SectionId.Contact,
+    ],
     [],
   );
 
@@ -64,14 +63,14 @@ const Header: FC<{locale?: Locale}> = memo(({locale = 'en'}) => {
 const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null; locale: Locale}> = memo(
   ({navSections, currentSection, locale}) => {
     const baseClass =
-      'border-b border-transparent px-1 py-2 text-sm font-medium first-letter:uppercase transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white';
-    const activeClass = classNames(baseClass, 'border-white text-white');
+      'border-b border-transparent px-1 py-2 text-sm font-medium first-letter:uppercase transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300';
+    const activeClass = classNames(baseClass, 'border-blue-300 text-blue-200');
     const inactiveClass = classNames(baseClass, 'text-neutral-400 hover:text-white');
     return (
       <header
-        className="fixed top-0 z-50 hidden w-full border-b border-neutral-800 bg-black/95 px-4 py-3 backdrop-blur sm:block"
+        className="fixed top-0 z-50 hidden w-full border-b border-neutral-800 bg-neutral-950/95 px-4 py-3 backdrop-blur sm:block"
         id={headerID}>
-        <nav className="flex justify-center gap-x-8">
+        <nav aria-label={locale === 'zh' ? '主要导航' : 'Primary navigation'} className="flex justify-center gap-x-7">
           {navSections.map(section => (
             <NavItem
               activeClass={activeClass}
@@ -99,18 +98,21 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null;
     }, [isOpen]);
 
     const baseClass =
-      'border-b border-neutral-800 px-2 py-3 first-letter:uppercase transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white';
-    const activeClass = classNames(baseClass, 'font-semibold text-white');
+      'border-b border-neutral-800 px-2 py-3 first-letter:uppercase transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300';
+    const activeClass = classNames(baseClass, 'font-semibold text-blue-200');
     const inactiveClass = classNames(baseClass, 'font-medium text-neutral-400');
     return (
       <>
-        <button
-          aria-label="Menu Button"
-          className="fixed right-3 top-3 z-40 rounded-md border border-neutral-700 bg-black p-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:hidden"
-          onClick={toggleOpen}>
-          <Bars3BottomRightIcon className="h-7 w-7" />
-          <span className="sr-only">Open sidebar</span>
-        </button>
+        {!isOpen && (
+          <button
+            aria-controls="mobile-navigation"
+            aria-expanded="false"
+            aria-label={locale === 'zh' ? '打开导航菜单' : 'Open navigation menu'}
+            className="fixed right-3 top-3 z-50 rounded-md border border-neutral-700 bg-neutral-950 p-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:hidden"
+            onClick={toggleOpen}>
+            <Bars3BottomRightIcon className="h-7 w-7" />
+          </button>
+        )}
         <Transition.Root as={Fragment} show={isOpen}>
           <Dialog as="div" className="fixed inset-0 z-40 flex sm:hidden" onClose={toggleOpen}>
             <Transition.Child
@@ -131,8 +133,19 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null;
               leave="transition ease-in-out duration-300 transform"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full">
-              <div className="relative w-4/5 max-w-xs border-r border-neutral-800 bg-black">
-                <nav className="mt-16 flex flex-col px-5">
+              <Dialog.Panel
+                className="relative w-4/5 max-w-xs border-r border-neutral-800 bg-neutral-950"
+                id="mobile-navigation">
+                <Dialog.Title className="sr-only">{locale === 'zh' ? '网站导航' : 'Site navigation'}</Dialog.Title>
+                <button
+                  aria-label={locale === 'zh' ? '关闭导航菜单' : 'Close navigation menu'}
+                  className="absolute right-3 top-3 rounded-md border border-neutral-700 p-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+                  onClick={toggleOpen}>
+                  <XMarkIcon aria-hidden="true" className="h-7 w-7" />
+                </button>
+                <nav
+                  aria-label={locale === 'zh' ? '移动端导航' : 'Mobile navigation'}
+                  className="mt-16 flex flex-col px-5">
                   {navSections.map(section => (
                     <NavItem
                       activeClass={activeClass}
@@ -147,7 +160,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null;
                   ))}
                   <LanguageSwitch locale={locale} onClick={toggleOpen} />
                 </nav>
-              </div>
+              </Dialog.Panel>
             </Transition.Child>
           </Dialog>
         </Transition.Root>
@@ -167,6 +180,7 @@ const NavItem: FC<{
 }> = memo(({section, current, inactiveClass, activeClass, label, locale, onClick}) => {
   return (
     <Link
+      aria-current={current ? 'location' : undefined}
       className={classNames(current ? activeClass : inactiveClass)}
       href={`${locale === 'zh' ? '/zh/' : '/'}#${section}`}
       key={section}
@@ -178,8 +192,8 @@ const NavItem: FC<{
 
 const LanguageSwitch: FC<{locale: Locale; onClick?: () => void}> = memo(({locale, onClick}) => (
   <Link
-    aria-label={locale === 'zh' ? 'Switch to English' : '切换至中文'}
-    className="border-l border-neutral-700 pl-6 text-sm font-semibold text-white hover:text-neutral-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+    aria-label={locale === 'zh' ? '切换至英文' : 'Switch to Chinese'}
+    className="border-l border-neutral-700 pl-6 text-sm font-semibold text-white hover:text-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
     href={locale === 'zh' ? '/' : '/zh/'}
     onClick={onClick}>
     {locale === 'zh' ? 'EN' : '中文'}

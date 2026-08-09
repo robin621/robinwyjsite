@@ -19,7 +19,6 @@ export default class SiteDocument extends Document<DocumentProps> {
       <Html lang={this.props.lang}>
         <Head>
           <meta charSet="utf-8" />
-          <meta content="notranslate" name="google" />
         </Head>
         <body className="bg-black">
           <Main />

@@ -158,7 +158,7 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
         </div>
       </Section>
 
-      <Section className="border-y border-neutral-800 bg-black" sectionId={SectionId.Teaching}>
+      <Section className="border-y border-neutral-800 bg-neutral-950" sectionId={SectionId.Teaching}>
         <SectionHeading
           description={isZh ? '当前课程与过往教学经历。' : 'Current course offerings and previous teaching experience.'}
           title={isZh ? '教学' : 'Teaching'}
@@ -173,7 +173,7 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
                   <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
                     {links.map(link => (
                       <a
-                        className="font-medium text-white underline decoration-neutral-500 underline-offset-4 hover:decoration-white"
+                        className="font-semibold text-blue-200 underline decoration-blue-400/60 underline-offset-4 hover:text-blue-100 hover:decoration-blue-200"
                         href={link.href}
                         key={link.label}
                         rel="noreferrer"
@@ -208,7 +208,7 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
                   <div className="mt-3 flex gap-5 text-sm">
                     {links.map(link => (
                       <a
-                        className="font-medium text-white underline decoration-neutral-500 underline-offset-4 hover:decoration-white"
+                        className="font-semibold text-blue-200 underline decoration-blue-400/60 underline-offset-4 hover:text-blue-100 hover:decoration-blue-200"
                         href={link.href}
                         key={link.label}
                         rel="noreferrer"
@@ -229,12 +229,18 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
 
 const ResearchGroup: FC<{title: string; items: AcademicItem[]}> = memo(({title, items}) => (
   <div>
-    <h3 className="mb-3 text-sm font-semibold uppercase text-neutral-400">{title}</h3>
+    <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-blue-300">{title}</h3>
     <div className="divide-y divide-neutral-700 border-y border-neutral-700">
       {items.map(({title: itemTitle, description}) => (
-        <article className="grid gap-2 py-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:gap-10" key={itemTitle}>
+        <article
+          className="grid gap-3 py-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:items-start md:gap-10"
+          key={itemTitle}>
           <h4 className="text-lg font-semibold text-white">{itemTitle}</h4>
-          {description && <p className="text-sm leading-6 text-neutral-300">{description}</p>}
+          {description && (
+            <p className="w-fit rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-sm leading-5 text-neutral-300">
+              {description}
+            </p>
+          )}
         </article>
       ))}
     </div>
@@ -243,7 +249,7 @@ const ResearchGroup: FC<{title: string; items: AcademicItem[]}> = memo(({title, 
 
 const SectionHeading: FC<{title: string; description: string}> = memo(({title, description}) => (
   <div className="mb-10 grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10">
-    <h2 className="text-3xl font-semibold text-white">{title}</h2>
+    <h2 className="text-3xl font-semibold text-white sm:text-4xl">{title}</h2>
     <p className="max-w-2xl leading-7 text-neutral-300">{description}</p>
   </div>
 ));

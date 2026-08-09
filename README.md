@@ -1,112 +1,40 @@
-# React JS Resume Website Template
+# Robin Yajie Wang — Academic Website
 
-![ReactJS Resume Website Template](resume-screenshot.jpg?raw=true 'ReactJS Resume Website Template')
+Bilingual academic website for Robin Yajie Wang, Assistant Professor of International Political Economy at The Chinese University of Hong Kong, Shenzhen.
 
-<div align="center">
+## Local development
 
-<img alt="GitHub release (latest by date including pre-releases" src="https://img.shields.io/github/v/release/tbakerx/react-resume-template?include_prereleases">
+```bash
+npm install
+npm run dev
+```
 
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/tbakerx/react-resume-template?style=flat">
+The English site is available at `/`; the Chinese site is available at `/zh/`.
 
-<img alt="GitHub Repo forks" src="https://img.shields.io/github/forks/tbakerx/react-resume-template?style=flat&color=success">
+## Quality checks
 
-<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tbakerx/react-resume-template?style=flat&color=yellow">
+```bash
+npm run check
+npm run build
+```
 
-<img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/tbakerx/react-resume-template/react?style=flat">
+`npm run build` creates the static export in `out/` and then generates `sitemap.xml` and `robots.txt` for the production domain without external dependencies.
 
-<img alt="Github Repo Sponsors" src="https://img.shields.io/github/sponsors/tbakerx?style=flat&color=blueviolet">
+## Content and assets
 
-## React based template for software developer-focused resume websites
+- English profile content: `src/data/data.tsx`
+- Chinese profile content: `src/data/zhData.tsx`
+- Research, teaching, and data sections: `src/components/Sections/AcademicSections.tsx`
+- CVs and syllabi: `public/`
+- Portrait source and optimized derivative: `src/images/`
+- Metadata and social sharing: `src/components/Layout/Page.tsx`
 
-</div>
+To regenerate optimized image and icon assets after replacing `src/images/profilepic.jpg`, run:
 
-### View a [live demo here.](https://reactresume.com)
+```powershell
+& "C:\Users\Robin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" scripts\generate_assets.py
+```
 
-#### If this template has helped you and you'd like to support my work, feel free to [♥️ Sponsor](https://github.com/sponsors/tbakerx) the project
+## Deployment
 
-### 🎉 Version 2 is here! New features:
-1. Completely rebuilt with React and full typescript support
-2. Built on the [Next.js](https://nextjs.org/) framework for easy server side rendering/static generation, image optimization, api routes, and deployment
-3. Styled entirely with [TailwindCss](https://tailwindcss.com/)
-4. Re-organized data population file for customizing site.
-5. Significant improvement/modernization of all site sections
- 
-**Looking for the old version? You can find it [here.](https://github.com/tbakerx/react-resume-template/releases/tag/v1.0.0)**
-
-## Description
-
-This is a React based personal resume website template. Built with typescript on the Next.js framework, styled with Tailwind css, and populated with data from a single file, you can easily create, customize and host your own personal website in minutes. Even better, the site is fully mobile-optimized and server-side rendered to ensure fast loading and a clean UI on any device. Read on to learn how to make it your own.
-
-## Make it Your Own!
-
-### 1. Make sure you have what you need
-
-To build this website, you will need to have the latest stable versions of Node and Yarn downloaded and installed on your machine. If you don't already have them, you can get Node [here,](https://nodejs.org/en/download/) and Yarn [here.](https://yarnpkg.com/getting-started/install)
-
-### 2. Fork and download this repo (and star if you like!)
-
-Next, find the `Fork` button in the top right of this page. This will allow you to make your own copy, for more info on forking repo's see [here.](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) After this, download to your development machine using the green `Code` button at the top of the repo page.
-
-### 3. Install dependencies and run
-
-Once you have your own copy of this repo forked and downloaded, open the folder in your favorite terminal and run `yarn install` to install dependencies. Following this, run `yarn dev` to run the project. In your terminal you should be given the url of the running instance (usually http://localhost:3000 unless you have something else running).
-
-### 4. Customize the data to make it your own
-
-All of the data for the site is driven via a file at `/src/data/data.tsx`. This is where you'll find the existing content, and updating the values here will be reflected on the site. If you have the site running as described above, you should see these changes reflected on save. The data types for all of these items are given in the same folder in the `dataDef.ts` file. Example images can be found at `src/images/` and are imported in the data file. To change, simply update these images using the same name and location, or add new images and update the imports. 
-
-### 5. Hook up contact form
-Due to the variety of options available for contact form providers, I've hooked up the contact form only so far as handling inputs and state. Form submission and the actual sending of the email is open to your own implementation. My personal recommendation for email provider is [Sendgrid.](https://sendgrid.com/)
-
-### 6. Make any other changes you like
-
-Of course, all of the code is there and nothing is hidden from you so if you would like to make any other styling/data changes, feel free!
-
-### 7. Deploy to Vercel and enjoy your new Resume Website
-
-Deploying your new site to Vercel is simple, and can be done by following their guide [here.](https://vercel.com/guides/deploying-nextjs-with-vercel) When you're all done and the build succeeds, you should be given a url for your live site, go there and you'll see your new personal resume website! Congratulations!
-
-
-## Using This Structure for Your Own Website
-
-If your goal is to reuse this project as a foundation (not just a resume clone), this is the fastest path:
-
-1. **Keep the layout/components, replace content first**
-   - Update `src/data/data.tsx` with your own copy, links, and images.
-   - Keep the same object shape so the existing components continue to render correctly.
-2. **Treat sections as modules**
-   - The landing page is assembled in `src/pages/index.tsx` from reusable section components.
-   - Remove sections you do not need and duplicate/rename sections you do need.
-3. **Move reusable values into config**
-   - Centralize site-level values in `src/config.ts` (title, SEO values, route-level constants).
-4. **Replace visuals early**
-   - Swap images in `src/images/` and update imports in `data.tsx` immediately to make the site feel like yours.
-5. **Iterate safely**
-   - Run `yarn dev` while editing and `yarn build` before deploy to catch typing/build issues.
-
-### Suggested customization order
-
-1. Branding (name, logo/headshot, colors)
-2. Navigation + section order
-3. Content (about, projects, experience)
-4. Contact form provider integration
-5. SEO + deployment
-
-Following this order lets you get a working personal site quickly, then refine details without breaking the structure.
-
-## Project Created & Maintained By
-
-### Tim Baker
-
-<a href="https://twitter.com/timbakerx"><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a><a href="https://instagram.com/tbakerx"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a>
-
-[![GitHub followers](https://img.shields.io/github/followers/tbakerx.svg?style=social&label=Follow)](https://github.com/tbakerx/)
-
-## Stargazers
-
-[![Stargazers repo roster for @tbakerx/react-resume-template](https://reporoster.com/stars/dark/tbakerx/react-resume-template)](https://github.com/tbakerx/react-resume-template/stargazers)
-
-## Forkers
-
-[![Forkers repo roster for @tbakerx/react-resume-template](https://reporoster.com/forks/dark/tbakerx/react-resume-template)](https://github.com/tbakerx/react-resume-template/network/members)
-
+The site uses Next.js static export and the custom domain `robin-yajiewang.com`. Deploy the contents of `out/` to the static host.

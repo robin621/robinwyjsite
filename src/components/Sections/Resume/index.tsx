@@ -30,8 +30,16 @@ const Resume: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
   const currentAwards = isZh ? zhAwards : awards;
 
   return (
-    <Section className="border-y border-neutral-800 bg-black" sectionId={SectionId.Resume}>
-      <div className="flex flex-col divide-y divide-neutral-700">
+    <Section className="border-y border-neutral-800 bg-neutral-950" sectionId={SectionId.Resume}>
+      <div className="mb-12 max-w-2xl">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">
+          {isZh ? '学术履历' : 'Curriculum vitae'}
+        </p>
+        <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+          {isZh ? '教育与任职经历' : 'Academic profile'}
+        </h2>
+      </div>
+      <div className="flex flex-col divide-y divide-neutral-800">
         <ResumeSection title={isZh ? '任职经历' : 'Appointments'}>
           {currentExperience.map((item, index) => (
             <TimelineItem item={item} key={`${item.title}-${index}`} />
@@ -43,7 +51,7 @@ const Resume: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
           ))}
         </ResumeSection>
         <ResumeSection title={isZh ? '奖项与资助' : 'Awards'}>
-          <ul className="space-y-3">
+          <ul className="list-disc space-y-3 pl-5 marker:text-blue-300">
             {currentAwards.map(award => (
               <li className="text-neutral-300" key={award}>
                 {award}
@@ -78,7 +86,7 @@ const Resume: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
 
 const Detail: FC<{label: string; text: string}> = memo(({label, text}) => (
   <div>
-    <h3 className="font-bold text-white">{label}</h3>
+    <h4 className="font-semibold text-white">{label}</h4>
     <p className="mt-1 leading-7 text-neutral-300">{text}</p>
   </div>
 ));

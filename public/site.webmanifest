@@ -1,11 +1,16 @@
 {
-  "name": "react-resume-template",
-  "short_name": "react-resume-template",
+  "id": "/",
+  "name": "Robin Yajie Wang — International Political Economy",
+  "short_name": "Yajie Wang",
+  "description": "Academic website of Robin Yajie Wang, Assistant Professor of International Political Economy.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
   "icons": [
-    {"src": "/icon-192.png", "type": "image/png", "sizes": "192x192"},
-    {"src": "/icon-512.png", "type": "image/png", "sizes": "512x512"}
-  ],
-  "theme_color": "#515455",
-  "background_color": "#515455",
-  "display": "standalone"
+    {"src": "/icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any"},
+    {"src": "/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable"},
+    {"src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable"}
+  ]
 }

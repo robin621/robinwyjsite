@@ -1,57 +1,54 @@
 import {ArrowDownTrayIcon} from '@heroicons/react/24/outline';
 
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/profilepic.webp';
 import {SectionId} from './data';
 import {About, ContactSection, ContactType, Hero, HomepageMeta, TimelineItem} from './dataDef';
 
 export const zhHomePageMeta: HomepageMeta = {
   title: '王亚杰｜国际政治经济学',
-  description: '王亚杰的个人学术网站。香港中文大学（深圳）全球与区域研究学科部国际政治经济学助理教授。',
+  description: '王亚杰，香港中文大学（深圳）国际政治经济学助理教授，研究全球化、国家能力、产业政策与中国政治经济。',
+  ogImageUrl: '/social-card.jpg',
+  twitterCardType: 'summary_large_image',
 };
 
 export const zhHeroData: Hero = {
-  imageSrc: profilepic,
   profileImageSrc: profilepic,
   name: '王亚杰',
   description: (
     <>
-      <p className="prose-sm leading-7 text-neutral-300 sm:prose-base lg:prose-lg">
-        你好！我现任
-        <strong className="font-semibold text-white">
-          香港中文大学（深圳）全球与区域研究学科部国际政治经济学助理教授
-        </strong>
-        。
-      </p>
-      <p className="prose-sm leading-7 text-neutral-300 sm:prose-base lg:prose-lg">
-        我的研究关注
-        <strong className="font-semibold text-white">全球化、经济开放与地缘政治竞争</strong>
-        如何重塑国家能力、财政制度、产业政策、企业行为与移民政策，重点聚焦中国及其他新兴经济体。
+      <p className="max-w-2xl text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
+        我现任
+        <a
+          className="font-semibold text-white underline decoration-blue-400/70 underline-offset-4 hover:text-blue-200"
+          href="https://www.cuhk.edu.cn/zh-hans"
+          rel="noreferrer"
+          target="_blank">
+          香港中文大学（深圳）国际政治经济学助理教授
+        </a>
+        ，研究全球化、经济开放与地缘政治竞争的政治经济影响，重点聚焦中国及其他新兴经济体。
       </p>
     </>
   ),
   actions: [
     {
       href: '/Yajie_Wang_CV_Chinese.pdf',
-      text: '个人简历',
+      text: '下载个人简历',
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
     {
       href: `/zh/#${SectionId.Contact}`,
-      text: '联系方式',
+      text: '联系我',
       primary: false,
     },
   ],
 };
 
 export const zhAboutData: About = {
-  profileImageSrc: profilepic,
   description: [
-    '我现任香港中文大学（深圳）人文社会科学学院全球与区域研究学科部国际政治经济学助理教授。',
-    '我于耶鲁大学获得政治学博士学位，并同时获得统计与数据科学硕士学位，另获牛津大学国际关系哲学硕士学位。本科毕业于北京外国语大学英语文学专业。我曾入选北京大学燕京学者项目，并曾任宾夕法尼亚大学 Perry World House 博士后研究员。',
-    '我的研究方向涵盖比较政治经济学、国际政治经济学与中国政治，重点关注全球化、经济开放与地缘政治竞争如何重塑国家能力、财政制度、产业政策、企业行为及移民政策，尤其聚焦中国及其他新兴经济体。我采用定性与定量相结合的研究方法，通过原创数据收集、统计分析与田野调查开展研究。',
-    '我当前的研究项目主要探讨全球化背景下的财政集权、税收能力与再分配机制，以及企业和国家如何应对贸易冲击、经济制裁与监管不确定性等问题。我的研究曾获得多项奖助支持，并在国际重要学术会议上报告。',
-    '我讲授研究方法、政治经济学、国际关系与产业政策等课程，注重研究设计训练、批判性思维培养，以及理论分析与现实政策问题的结合。',
+    '我现任香港中文大学（深圳）全球与区域研究学科部国际政治经济学助理教授。我于耶鲁大学获得政治学博士和统计与数据科学硕士学位，并于牛津大学获得国际关系哲学硕士学位。',
+    '我的研究方向涵盖比较政治经济学、国际政治经济学与中国政治，综合运用原创数据收集、统计分析、定性田野调查与研究设计，探讨国家能力、财政制度、产业政策、企业行为和移民政策。',
+    '我目前研究全球化背景下的财政集权与再分配，以及企业和国家如何应对贸易冲击、经济制裁和监管不确定性。我也讲授研究方法、政治经济学、国际关系与产业政策等课程。',
   ],
 };
 
@@ -131,8 +128,8 @@ export const zhLanguagesAndSkills = '普通话（母语）；R、Stata、Python�
 export const zhFieldworkExperience = '中国大陆（2021年8月-2022年8月）';
 
 export const zhContact: ContactSection = {
-  headerText: '联系我',
-  description: '欢迎就政治经济学、贸易与中国政治研究进行学术交流与合作。',
+  headerText: '与我联系',
+  description: '欢迎就政治经济学、贸易与中国研究进行学术交流、教学咨询与合作。',
   items: [
     {
       type: ContactType.Email,
@@ -140,23 +137,23 @@ export const zhContact: ContactSection = {
       href: 'mailto:yajiewang@cuhk.edu.cn',
     },
     {
-      type: ContactType.Email,
-      text: 'yajie.wang621@gmail.com',
-      href: 'mailto:yajie.wang621@gmail.com',
+      type: ContactType.Phone,
+      text: '+86 755 2351 6865',
+      href: 'tel:+8675523516865',
     },
     {
       type: ContactType.Location,
-      text: '中国广东省深圳市龙岗区龙翔大道2001号，综合教学楼B栋11层',
-      href: 'https://www.amap.com/search?query=深圳市龙岗区龙翔大道2001号',
+      text: '香港中文大学（深圳），中国深圳',
+      href: 'https://www.cuhk.edu.cn/zh-hans',
     },
     {
-      type: ContactType.Phone,
-      text: '+86 134 3062 1063',
-      href: 'tel:+8613430621063',
+      type: ContactType.LinkedIn,
+      text: 'linkedin.com/in/robin-yajie-wang-59277186',
+      href: 'https://www.linkedin.com/in/robin-yajie-wang-59277186/',
     },
     {
       type: ContactType.Github,
-      text: 'robin621',
+      text: 'github.com/robin621',
       href: 'https://github.com/robin621',
     },
   ],

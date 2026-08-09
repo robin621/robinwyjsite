@@ -1,15 +1,17 @@
 {
-  "name": "react-resume-template",
+  "name": "robin-yajie-wang-academic-site",
   "version": "2.0.0",
   "private": true,
   "scripts": {
     "build": "tsc --build --verbose && next build",
-    "clean": "rm -rf build-tsc .next",
+    "postbuild": "node scripts/generate-sitemap.mjs",
+    "clean": "node scripts/clean.mjs",
     "compile": "tsc --build --verbose",
     "dev": "tsc --build --verbose && next dev",
-    "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
-    "start": "yarn next start",
-    "sitemap": "yarn next-sitemap"
+    "lint": "prettier --write \"src/**/*.{js,jsx,json,ts,tsx}\" \"scripts/**/*.{js,mjs}\" && eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix --max-warnings=0",
+    "check": "prettier --check \"src/**/*.{js,jsx,json,ts,tsx}\" \"scripts/**/*.{js,mjs}\" && eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0 && tsc --noEmit",
+    "start": "next start",
+    "sitemap": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
