@@ -6,6 +6,7 @@ import Section from '../Layout/Section';
 type AcademicItem = {
   title: string;
   description: string;
+  abstract?: string;
   links?: {label: string; href: string}[];
 };
 
@@ -21,6 +22,9 @@ const workingPapers: AcademicItem[] = [
     title:
       'Embedded Fiscal Centralization: How Economic Openness Increased Fiscal Capacity and Redistribution in Contemporary China',
     description: 'CPS Revise & Resubmit',
+    abstract:
+      'When can trade openness strengthen rather than erode fiscal capacity? I argue that openness builds central fiscal capacity when export opportunities create new firms under the jurisdiction of a centrally controlled tax bureaucracy, limiting local influence over enforcement. China’s World Trade Organization (WTO) accession provides a most-likely test: the 2002 enterprise income tax (EIT) reform placed new firms under central collection and gave the center a statutory revenue share. Using a city-level Bartik design that instruments export exposure with tariff-predicted export growth, I find that exposed cities registered more private firms, had more frontline tax bureaucrats in the central tax bureaucracy, and collected more centrally shared EIT. I also show that fiscal centralization enables selective compensation downstream: national revenue pooling leads to greater grants and fiscal dependence in cities where employment in state-owned enterprises (SOEs) declined more. These findings suggest that the fiscal effects of openness depend on how governments organize collection and pool revenue across places.',
+    links: [{label: 'Paper (PDF)', href: '/Embedded_Fiscal_Centralization.pdf'}],
   },
   {
     title: 'Strategic Liberalization: The Political Economy of Targeted Tariff Reductions in China',
@@ -231,16 +235,42 @@ const ResearchGroup: FC<{title: string; items: AcademicItem[]}> = memo(({title, 
   <div>
     <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-blue-300">{title}</h3>
     <div className="divide-y divide-neutral-700 border-y border-neutral-700">
-      {items.map(({title: itemTitle, description}) => (
+      {items.map(({title: itemTitle, description, abstract, links}) => (
         <article
           className="grid gap-3 py-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:items-start md:gap-10"
           key={itemTitle}>
-          <h4 className="text-lg font-semibold text-white">{itemTitle}</h4>
-          {description && (
-            <p className="w-fit rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-sm leading-5 text-neutral-300">
-              {description}
-            </p>
-          )}
+          <div>
+            <h4 className="text-lg font-semibold text-white">{itemTitle}</h4>
+            {links && (
+              <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                {links.map(link => (
+                  <a
+                    className="font-semibold text-blue-200 underline decoration-blue-400/60 underline-offset-4 hover:text-blue-100 hover:decoration-blue-200"
+                    href={link.href}
+                    key={link.label}
+                    rel="noreferrer"
+                    target="_blank">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="space-y-3">
+            {description && (
+              <p className="w-fit rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-sm leading-5 text-neutral-300">
+                {description}
+              </p>
+            )}
+            {abstract && (
+              <details className="group rounded-md border border-neutral-700 bg-neutral-950 px-4 py-3 text-sm text-neutral-300">
+                <summary className="cursor-pointer font-semibold text-blue-200 marker:text-blue-300 hover:text-blue-100">
+                  Abstract
+                </summary>
+                <p className="mt-3 leading-6">{abstract}</p>
+              </details>
+            )}
+          </div>
         </article>
       ))}
     </div>
