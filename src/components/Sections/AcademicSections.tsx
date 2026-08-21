@@ -256,21 +256,21 @@ const ResearchGroup: FC<{title: string; items: AcademicItem[]}> = memo(({title, 
               </div>
             )}
           </div>
-          <div className="space-y-3">
+          <div>
             {description && (
               <p className="w-fit rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-sm leading-5 text-neutral-300">
                 {description}
               </p>
             )}
-            {abstract && (
-              <details className="group rounded-md border border-neutral-700 bg-neutral-950 px-4 py-3 text-sm text-neutral-300">
-                <summary className="cursor-pointer font-semibold text-blue-200 marker:text-blue-300 hover:text-blue-100">
-                  Abstract
-                </summary>
-                <p className="mt-3 leading-6">{abstract}</p>
-              </details>
-            )}
           </div>
+          {abstract && (
+            <details className="group rounded-md border border-neutral-700 bg-neutral-950 px-4 py-3 text-sm text-neutral-300 md:col-span-2">
+              <summary className="cursor-pointer font-semibold text-blue-200 marker:text-blue-300 hover:text-blue-100">
+                Abstract
+              </summary>
+              <p className="mt-3 leading-6">{abstract}</p>
+            </details>
+          )}
         </article>
       ))}
     </div>
