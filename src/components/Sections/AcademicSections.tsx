@@ -43,6 +43,13 @@ const workingPapers: AcademicItem[] = [
     abstract:
       'High-skilled immigration is often treated as the least contested form of immigration. Yet this consensus may erode when elite rhetoric links foreign STEM workers to geopolitical rivalry and national-security risk. We argue that great-power competition affects immigration opinion on two distinct margins: the policy-scale margin, or support for expanding high-skilled admissions, and the applicant-selection margin, or preferences over which applicants should be admitted. We test this argument using parallel vignette and conjoint survey experiments in the United States and China (combined N > 6,000). The vignette experiment shows that threat framing lowers support for expanding high-skilled visa programs in both countries, while a competition-with-screening frame partially mitigates this decline by portraying foreign talent as a controllable strategic asset. The perceived channels differ across contexts: U.S. respondents react most strongly through national-security and technological-advantage concerns, whereas Chinese respondents react more through economic and labor-market concerns. The conjoint experiment shows that applicant selection is more stable. Across countries and framing conditions, respondents favor applicants with stronger host-country ties, higher expected income, and more favorable geopolitical alignment. These findings show that geopolitical rivalry does not simply close the door to skilled migration. Instead, it produces selective openness: citizens become more skeptical of expanding admissions overall while continuing to favor applicants who appear economically valuable, geopolitically aligned, and socially attached to the host country.',
   },
+  {
+    title: 'Better Safe than Sorry: Sanctions and Firm Overcompliance',
+    description: '',
+    coauthors: [{name: 'Eric Jeong', href: 'https://perryworldhouse.upenn.edu/fellows-and-affiliates/eric-jeong/'}],
+    abstract:
+      'How do firms respond when governments take a geopolitical position but leave the practical boundaries of compliance unclear? We argue that political standing shapes how firms interpret such signals. Firms with stronger political standing can better assess the state’s enforcement intentions and calibrate their response, whereas firms with weaker standing are more likely to withdraw beyond formal requirements. We test this argument using monthly Chinese customs data around North Korea’s 2006 nuclear test and United Nations (UN) Security Council Resolution 1718. Our difference-in-differences design compares firms’ exports to North Korea with their exports to other destinations, and a triple-difference design compares private firms with state-owned enterprises (SOEs). We find that private firms sharply reduced exports to North Korea, while SOEs largely maintained trade. The divergence persists after excluding potentially sanctioned products, within food and broader humanitarian goods, and on the extensive margin. These findings show how political standing helps firms interpret ambiguous state signals and how targeted geopolitical policies can induce uneven precautionary withdrawal beyond their formal scope.',
+  },
 ];
 
 const workInProgress: AcademicItem[] = [
@@ -54,10 +61,6 @@ const workInProgress: AcademicItem[] = [
   {
     title: 'The Returns to Tax Compliance: How Chinese Firms Navigate Tax Reform',
     description: 'With Xiaobo Lü',
-  },
-  {
-    title: "Reading the State's Mind: Nuclear Sanctions and Heterogeneous Firm Response",
-    description: 'With Eric Jeong',
   },
   {
     title: 'The Unlikely Alliance: How Chinese Exporters Navigate Trade Tensions Through International Alliance',
