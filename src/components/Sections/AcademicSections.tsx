@@ -20,11 +20,6 @@ const dissertationItems: AcademicItem[] = [
 
 const workingPapers: AcademicItem[] = [
   {
-    title: 'Industrial Policy by Forbearance: Environmental Enforcement Discretion in China',
-    description: '',
-    coauthors: [{name: 'Yixuan Wang', href: 'https://sites.google.com/view/wangyixuan/home?authuser=0'}],
-  },
-  {
     title:
       'Embedded Fiscal Centralization: How Economic Openness Increased Fiscal Capacity and Redistribution in Contemporary China',
     description: 'CPS Revise & Resubmit',
@@ -39,6 +34,11 @@ const workingPapers: AcademicItem[] = [
   {
     title: 'The Politics of Deglobalization: Trade Shocks and Divergent Local Government Responses in China',
     description: '',
+  },
+  {
+    title: 'Industrial Policy by Forbearance: Environmental Enforcement Discretion in China',
+    description: '',
+    coauthors: [{name: 'Yixuan Wang', href: 'https://sites.google.com/view/wangyixuan/home?authuser=0'}],
   },
 ];
 
