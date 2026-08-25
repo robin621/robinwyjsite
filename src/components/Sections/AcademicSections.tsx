@@ -36,9 +36,12 @@ const workingPapers: AcademicItem[] = [
     description: '',
   },
   {
-    title: 'Industrial Policy by Forbearance: Environmental Enforcement Discretion in China',
+    title:
+      'Great-Power Competition and Public Support for High-Skilled Immigration: Evidence from the United States and China',
     description: '',
-    coauthors: [{name: 'Yixuan Wang', href: 'https://sites.google.com/view/wangyixuan/home?authuser=0'}],
+    coauthors: [{name: 'Jiahua Yue', href: 'https://yjh1222.github.io/'}],
+    abstract:
+      'High-skilled immigration is often treated as the least contested form of immigration. Yet this consensus may erode when elite rhetoric links foreign STEM workers to geopolitical rivalry and national-security risk. We argue that great-power competition affects immigration opinion on two distinct margins: the policy-scale margin, or support for expanding high-skilled admissions, and the applicant-selection margin, or preferences over which applicants should be admitted. We test this argument using parallel vignette and conjoint survey experiments in the United States and China (combined N > 6,000). The vignette experiment shows that threat framing lowers support for expanding high-skilled visa programs in both countries, while a competition-with-screening frame partially mitigates this decline by portraying foreign talent as a controllable strategic asset. The perceived channels differ across contexts: U.S. respondents react most strongly through national-security and technological-advantage concerns, whereas Chinese respondents react more through economic and labor-market concerns. The conjoint experiment shows that applicant selection is more stable. Across countries and framing conditions, respondents favor applicants with stronger host-country ties, higher expected income, and more favorable geopolitical alignment. These findings show that geopolitical rivalry does not simply close the door to skilled migration. Instead, it produces selective openness: citizens become more skeptical of expanding admissions overall while continuing to favor applicants who appear economically valuable, geopolitically aligned, and socially attached to the host country.',
   },
 ];
 
@@ -46,10 +49,6 @@ const workInProgress: AcademicItem[] = [
   {
     title: 'The Returns to Tax Compliance: How Chinese Firms Navigate Tax Reform',
     description: 'With Xiaobo Lü',
-  },
-  {
-    title: 'Vying for Soft Power: How Great Power Competition Affects Public Support for High-Skilled Immigration',
-    description: 'With Jiahua Yue',
   },
   {
     title: "Reading the State's Mind: Nuclear Sanctions and Heterogeneous Firm Response",
