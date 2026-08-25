@@ -20,12 +20,8 @@ const Footer: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => (
       </div>
       <span className="text-sm text-neutral-400">&copy; {new Date().getFullYear()} Yajie &quot;Robin&quot; Wang</span>
       <blockquote className="max-w-xl pt-4 text-center text-xs italic leading-5 text-neutral-400">
-        {locale === 'zh'
-          ? '“不正确的事，不要去做；不真实的话，不要去说。”'
-          : '“If it is not right, do not do it; if it is not true, do not say it.”'}
-        <cite className="mt-1 block not-italic text-neutral-500">
-          {locale === 'zh' ? '马可·奥勒留' : 'Marcus Aurelius'}
-        </cite>
+        “If it is not right, do not do it; if it is not true, do not say it.”
+        <cite className="mt-1 block not-italic text-neutral-500">Marcus Aurelius</cite>
       </blockquote>
     </div>
   </footer>
