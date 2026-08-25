@@ -60,7 +60,8 @@ const workInProgress: AcademicItem[] = [
   },
   {
     title: 'The Returns to Tax Compliance: How Chinese Firms Navigate Tax Reform',
-    description: 'With Xiaobo Lü',
+    description: '',
+    coauthors: [{name: 'Xiaobo Lü', href: 'https://www.xiaobolu.com/'}],
   },
   {
     title: 'The Public Price of Talent',
@@ -69,11 +70,11 @@ const workInProgress: AcademicItem[] = [
   },
   {
     title: 'The Unlikely Alliance: How Chinese Exporters Navigate Trade Tensions Through International Alliance',
-    description: 'Work in progress',
+    description: '',
   },
   {
     title: 'Managing Openness in Hard Times: Export Slowdown and Bureaucratic Enforcement in China',
-    description: 'Work in progress',
+    description: '',
   },
 ];
 
