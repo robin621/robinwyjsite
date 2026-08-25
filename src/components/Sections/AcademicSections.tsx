@@ -67,7 +67,7 @@ const workInProgress: AcademicItem[] = [
 const teachingItems: AcademicItem[] = [
   {
     title: 'GLB5020 - Social Science Research Methods',
-    description: 'CUHK-Shenzhen, Spring 2026',
+    description: 'CUHK-Shenzhen, Spring and Fall 2026',
     links: [
       {label: 'Course page', href: 'https://www.cuhk.edu.cn/en/course/16138'},
       {label: 'Syllabus', href: '/GLB5020_Social_Science_Research_Methods_Syllabus_Spring_2026.pdf'},
@@ -107,7 +107,7 @@ const dataItems: AcademicItem[] = [
 const zhTeachingItems: AcademicItem[] = [
   {
     title: 'GLB5020 - 社会科学研究方法',
-    description: '香港中文大学（深圳），2026年春季',
+    description: '香港中文大学（深圳），2026年春季、秋季',
     links: [
       {label: '课程页面', href: 'https://www.cuhk.edu.cn/zh-hans/course/16138'},
       {label: '教学大纲', href: '/GLB5020_Social_Science_Research_Methods_Syllabus_Spring_2026.pdf'},
