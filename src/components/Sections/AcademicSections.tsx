@@ -152,14 +152,7 @@ const AcademicSections: FC<{locale?: 'en' | 'zh'}> = memo(({locale = 'en'}) => {
   return (
     <>
       <Section className="bg-black" sectionId={SectionId.Research}>
-        <SectionHeading
-          description={
-            isZh
-              ? '国际关系、政治经济学与比较政治领域的博士论文、工作论文与在研项目。'
-              : 'Dissertation, working papers, and ongoing projects in international relations, political economy, and comparative politics.'
-          }
-          title={isZh ? '研究' : 'Research'}
-        />
+        <SectionHeading description="" title={isZh ? '研究' : 'Research'} />
         <div className="space-y-12">
           <ResearchGroup items={dissertationItems} title={isZh ? '博士论文' : 'Dissertation'} />
           <ResearchGroup items={workingPapers} title={isZh ? '工作论文' : 'Working Papers'} />
@@ -302,7 +295,7 @@ const ResearchGroup: FC<{title: string; items: AcademicItem[]}> = memo(({title, 
 const SectionHeading: FC<{title: string; description: string}> = memo(({title, description}) => (
   <div className="mb-10 grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-10">
     <h2 className="text-3xl font-semibold text-white sm:text-4xl">{title}</h2>
-    <p className="max-w-2xl leading-7 text-neutral-300">{description}</p>
+    {description && <p className="max-w-2xl leading-7 text-neutral-300">{description}</p>}
   </div>
 ));
 
