@@ -47,6 +47,11 @@ const workingPapers: AcademicItem[] = [
 
 const workInProgress: AcademicItem[] = [
   {
+    title: 'Industrial Policy by Forbearance: Environmental Enforcement Discretion in China',
+    description: '',
+    coauthors: [{name: 'Yixuan Wang', href: 'https://sites.google.com/view/wangyixuan/home?authuser=0'}],
+  },
+  {
     title: 'The Returns to Tax Compliance: How Chinese Firms Navigate Tax Reform',
     description: 'With Xiaobo Lü',
   },
