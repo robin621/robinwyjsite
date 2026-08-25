@@ -27,7 +27,7 @@ const navLabels: Record<Locale, Record<SectionId, string>> = {
     [SectionId.Data]: '数据',
     [SectionId.Hero]: '首页',
     [SectionId.Research]: '研究',
-    [SectionId.Resume]: '履历',
+    [SectionId.Resume]: '简历',
     [SectionId.Teaching]: '教学',
   },
 };
