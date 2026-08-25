@@ -7,6 +7,7 @@ type AcademicItem = {
   title: string;
   description: string;
   abstract?: string;
+  coauthors?: {name: string; href: string}[];
   links?: {label: string; href: string}[];
 };
 
@@ -18,6 +19,11 @@ const dissertationItems: AcademicItem[] = [
 ];
 
 const workingPapers: AcademicItem[] = [
+  {
+    title: 'Industrial Policy by Forbearance: Environmental Enforcement Discretion in China',
+    description: '',
+    coauthors: [{name: 'Yixuan Wang', href: 'https://sites.google.com/view/wangyixuan/home?authuser=0'}],
+  },
   {
     title:
       'Embedded Fiscal Centralization: How Economic Openness Increased Fiscal Capacity and Redistribution in Contemporary China',
@@ -235,12 +241,29 @@ const ResearchGroup: FC<{title: string; items: AcademicItem[]}> = memo(({title, 
   <div>
     <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-blue-300">{title}</h3>
     <div className="divide-y divide-neutral-700 border-y border-neutral-700">
-      {items.map(({title: itemTitle, description, abstract, links}) => (
+      {items.map(({title: itemTitle, description, abstract, coauthors, links}) => (
         <article
           className="grid gap-3 py-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:items-start md:gap-10"
           key={itemTitle}>
           <div>
             <h4 className="text-lg font-semibold text-white">{itemTitle}</h4>
+            {coauthors && (
+              <p className="mt-2 text-sm text-neutral-300">
+                With{' '}
+                {coauthors.map((coauthor, index) => (
+                  <span key={coauthor.href}>
+                    {index > 0 && ', '}
+                    <a
+                      className="font-semibold text-blue-200 underline decoration-blue-400/60 underline-offset-4 hover:text-blue-100 hover:decoration-blue-200"
+                      href={coauthor.href}
+                      rel="noreferrer"
+                      target="_blank">
+                      {coauthor.name}
+                    </a>
+                  </span>
+                ))}
+              </p>
+            )}
             {links && (
               <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
                 {links.map(link => (
