@@ -50,6 +50,11 @@ const workingPapers: AcademicItem[] = [
     abstract:
       'How do firms respond when governments take a geopolitical position but leave the practical boundaries of compliance unclear? We argue that political standing shapes how firms interpret such signals. Firms with stronger political standing can better assess the state’s enforcement intentions and calibrate their response, whereas firms with weaker standing are more likely to withdraw beyond formal requirements. We test this argument using monthly Chinese customs data around North Korea’s 2006 nuclear test and United Nations (UN) Security Council Resolution 1718. Our difference-in-differences design compares firms’ exports to North Korea with their exports to other destinations, and a triple-difference design compares private firms with state-owned enterprises (SOEs). We find that private firms sharply reduced exports to North Korea, while SOEs largely maintained trade. The divergence persists after excluding potentially sanctioned products, within food and broader humanitarian goods, and on the extensive margin. These findings show how political standing helps firms interpret ambiguous state signals and how targeted geopolitical policies can induce uneven precautionary withdrawal beyond their formal scope.',
   },
+  {
+    title: 'The Public Price of Talent',
+    description: '',
+    coauthors: [{name: 'Eric Jeong', href: 'https://perryworldhouse.upenn.edu/fellows-and-affiliates/eric-jeong/'}],
+  },
 ];
 
 const workInProgress: AcademicItem[] = [
