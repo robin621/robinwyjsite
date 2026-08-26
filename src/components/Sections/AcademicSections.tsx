@@ -61,7 +61,7 @@ const workInProgress: AcademicItem[] = [
     coauthors: [{name: 'Yixuan Wang', href: 'https://sites.google.com/view/wangyixuan/home?authuser=0'}],
   },
   {
-    title: 'The Returns to Tax Compliance: How Chinese Firms Navigate Tax Reform',
+    title: 'You Can Run But You Can’t Hide: How Firms Respond to Enhanced State Legibility in the Digital Age',
     description: '',
     coauthors: [{name: 'Xiaobo Lü', href: 'https://www.xiaobolu.com/'}],
   },
