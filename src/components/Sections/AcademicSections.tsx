@@ -32,6 +32,7 @@ const workingPapers: AcademicItem[] = [
     description: 'ISQ Revise & Resubmit',
     abstract:
       'Trade agreements commit governments to lower tariffs, but often leave discretion over how those reductions are allocated across products. This paper explains how administrative hierarchy shapes the product-level allocation of trade liberalization. I develop a theory of administrative representation: firms with authoritative bureaucratic sponsors are better positioned to turn product-specific demands into actionable requests for tariff relief. I examine China’s trade policymaking after its accession to the World Trade Organization (WTO) by linking firms’ pre-accession imports to subsequent tariff schedules and interim-duty lists and identifying each firm’s administrative affiliation status. Products with greater pre-accession import exposure to centrally affiliated firms faced lower applied tariff rates after WTO accession and were more likely to receive preferential interim-duty rates. Institutional records and policymaker interviews describe the proposed transmission process. Together, the distributional and process evidence is consistent with domestic administrative institutions shaping the product-level allocation of trade liberalization.',
+    links: [{label: 'Paper (PDF)', href: '/Allocating_Liberalization.pdf'}],
   },
   {
     title: 'The Politics of Deglobalization: Trade Shocks and Divergent Local Government Responses in China',
