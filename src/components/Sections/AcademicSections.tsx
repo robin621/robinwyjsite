@@ -53,6 +53,11 @@ const workingPapers: AcademicItem[] = [
     abstract:
       'How do firms respond when a government takes a position on a geopolitical issue but leaves its enforcement resolve uncertain? We argue that political standing shapes how firms respond to this uncertainty. Firms with stronger political standing have better information about the state’s enforcement intentions and can calibrate their response, whereas firms with weaker standing are more likely to withdraw beyond formal requirements. We test this argument using Chinese customs data around North Korea’s 2006 nuclear test and UN Security Council Resolution 1718. Difference-in-differences estimates show that private firms sharply reduced exports to North Korea, while state-owned enterprises largely maintained trade. This divergence extends to products outside the resolution’s likely scope, including food and other humanitarian goods. The findings suggest that ambiguous state signals produce uneven patterns of overcompliance across firms, broadening the economic and humanitarian consequences of targeted geopolitical policies.',
   },
+  {
+    title: 'You Can Run But You Can’t Hide: How Firms Respond to Enhanced State Legibility in the Digital Age',
+    description: '',
+    coauthors: [{name: 'Xiaobo Lü', href: 'https://www.xiaobolu.com/'}],
+  },
 ];
 
 const workInProgress: AcademicItem[] = [
@@ -60,11 +65,6 @@ const workInProgress: AcademicItem[] = [
     title: 'Industrial Policy by Forbearance: Environmental Enforcement Discretion in China',
     description: '',
     coauthors: [{name: 'Yixuan Wang', href: 'https://sites.google.com/view/wangyixuan/home?authuser=0'}],
-  },
-  {
-    title: 'You Can Run But You Can’t Hide: How Firms Respond to Enhanced State Legibility in the Digital Age',
-    description: '',
-    coauthors: [{name: 'Xiaobo Lü', href: 'https://www.xiaobolu.com/'}],
   },
   {
     title: 'The Public Price of Talent',
