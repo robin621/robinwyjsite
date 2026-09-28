@@ -13,7 +13,7 @@ const Hero: FC<{data?: HeroData; locale?: 'en' | 'zh'}> = memo(({data = heroData
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
-      <div className="hero-surface relative flex min-h-[88vh] w-full items-center justify-center overflow-hidden px-4 py-20 sm:py-24">
+      <div className="relative flex min-h-[88vh] w-full items-center justify-center overflow-hidden bg-black px-4 py-20 sm:py-24">
         <div className="mx-auto w-full max-w-screen-md">
           <div className="flex flex-col items-center gap-y-6 text-center">
             {profileImageSrc && (

@@ -82,12 +82,6 @@ section[id] {
   scroll-margin-top: 4.5rem;
 }
 
-.hero-surface {
-  background:
-    radial-gradient(circle at 50% 22%, rgb(59 130 246 / 14%), transparent 36rem),
-    linear-gradient(180deg, #0a0a0a 0%, #000 100%);
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
