@@ -27,9 +27,6 @@ const Hero: FC<{data?: HeroData; locale?: 'en' | 'zh'}> = memo(({data = heroData
               />
             )}
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-blue-300 sm:text-sm">
-                {locale === 'zh' ? '国际政治经济学' : 'International Political Economy'}
-              </p>
               <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">{name}</h1>
             </div>
             <div className="max-w-2xl space-y-3">{description}</div>
