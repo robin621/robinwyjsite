@@ -48,7 +48,7 @@ const workingPapers: AcademicItem[] = [
   },
   {
     title: 'Better Safe than Sorry: Sanctions and Firm Overcompliance',
-    description: '',
+    description: 'Under Review',
     coauthors: [{name: 'Eric Jeong', href: 'https://perryworldhouse.upenn.edu/fellows-and-affiliates/eric-jeong/'}],
     abstract:
       'Economic sanctions are a central instrument of economic statecraft, yet they can prompt firms to abandon trade that governments remain willing to permit. We develop a theory of precautionary overcompliance in which unequal access to credible political information shapes firms’ ability to infer the state’s enforcement resolve. When officials permit continued trade but their intentions remain uncertain, firms with weaker political standing may abandon activities beyond formal prohibitions. Better information can preserve commerce in this setting or encourage withdrawal when officials intend broader disengagement. We examine these implications using monthly Chinese customs records following North Korea’s 2006 nuclear test and subsequent UN sanctions. Comparing firms’ product-level exports to North Korea with exports to other destinations, we find that private firms withdraw more than state-owned enterprises (SOEs). This ownership gap persists after excluding products plausibly covered by formal sanctions and extends to food and humanitarian categories. Comparative cases of economic coercion involving China support the argument that clearer information about the government’s enforcement resolve can encourage SOEs to comply more fully with demands to withdraw from trade. Our argument explains how unequal political access within states shapes the international effects of economic statecraft.',
