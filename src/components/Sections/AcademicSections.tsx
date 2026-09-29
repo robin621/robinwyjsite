@@ -80,6 +80,10 @@ const workInProgress: AcademicItem[] = [
     title: 'Managing Openness in Hard Times: Export Slowdown and Bureaucratic Enforcement in China',
     description: '',
   },
+  {
+    title: 'What Do We Talk About When We Talk About China',
+    description: '',
+  },
 ];
 
 const teachingItems: AcademicItem[] = [
