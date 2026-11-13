@@ -19,14 +19,14 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
 const contactLabels: Record<'en' | 'zh', Record<ContactType, string>> = {
   en: {
     [ContactType.Email]: 'Email',
-    [ContactType.Phone]: 'School direct line',
+    [ContactType.Phone]: 'Office phone',
     [ContactType.Location]: 'Location',
     [ContactType.LinkedIn]: 'LinkedIn',
     [ContactType.Github]: 'GitHub',
   },
   zh: {
     [ContactType.Email]: '邮箱',
-    [ContactType.Phone]: '学校直线电话',
+    [ContactType.Phone]: '办公室电话',
     [ContactType.Location]: '所在地',
     [ContactType.LinkedIn]: 'LinkedIn',
     [ContactType.Github]: 'GitHub',

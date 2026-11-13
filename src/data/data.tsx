@@ -152,7 +152,7 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Phone,
-      text: '+86 755 2351 6865',
+      text: '+86 (0) 75523516865',
       href: 'tel:+8675523516865',
     },
     {
