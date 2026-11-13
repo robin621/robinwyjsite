@@ -7,9 +7,13 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
+
+env:
+  PAGES_ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
 concurrency:
   group: pages
@@ -42,8 +46,26 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
+          name: ${{ env.PAGES_ARTIFACT_NAME }}
           path: out
+
+      - name: Wait for uploaded website
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in $(seq 1 12); do
+            artifact_count="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=$PAGES_ARTIFACT_NAME" --jq '.artifacts | length')" || artifact_count=0
+            if [ "$artifact_count" = "1" ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::The uploaded website artifact is not available."
+          exit 1
 
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}
+
