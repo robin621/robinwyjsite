@@ -35,6 +35,14 @@ const workingPapers: AcademicItem[] = [
     links: [{label: 'Paper (PDF)', href: '/Allocating_Liberalization.pdf'}],
   },
   {
+    title: 'Better Safe than Sorry: Sanctions and Firm Overcompliance',
+    description: 'Under Review',
+    coauthors: [{name: 'Eric Jeong', href: 'https://perryworldhouse.upenn.edu/fellows-and-affiliates/eric-jeong/'}],
+    abstract:
+      'Economic sanctions are a central instrument of economic statecraft, yet they can prompt firms to abandon trade that governments remain willing to permit. We develop a theory of precautionary overcompliance in which unequal access to credible political information shapes firms’ ability to infer the state’s enforcement resolve. When officials permit continued trade but their intentions remain uncertain, firms with weaker political standing may abandon activities beyond formal prohibitions. Better information can preserve commerce in this setting or encourage withdrawal when officials intend broader disengagement. We examine these implications using monthly Chinese customs records following North Korea’s 2006 nuclear test and subsequent UN sanctions. Comparing firms’ product-level exports to North Korea with exports to other destinations, we find that private firms withdraw more than state-owned enterprises (SOEs). This ownership gap persists after excluding products plausibly covered by formal sanctions and extends to food and humanitarian categories. Comparative cases of economic coercion involving China support the argument that clearer information about the government’s enforcement resolve can encourage SOEs to comply more fully with demands to withdraw from trade. Our argument explains how unequal political access within states shapes the international effects of economic statecraft.',
+    links: [{label: 'Paper (PDF)', href: '/Better_Safe_than_Sorry.pdf'}],
+  },
+  {
     title: 'The Politics of Deglobalization: Trade Shocks and Divergent Local Government Responses in China',
     description: '',
   },
@@ -47,15 +55,7 @@ const workingPapers: AcademicItem[] = [
       'High-skilled immigration is often treated as the least contested form of immigration. Yet this consensus may erode when elite rhetoric links foreign STEM workers to geopolitical rivalry and national-security risk. We argue that great-power competition affects immigration opinion on two distinct margins: the policy-scale margin, or support for expanding high-skilled admissions, and the applicant-selection margin, or preferences over which applicants should be admitted. We test this argument using parallel vignette and conjoint survey experiments in the United States and China (combined N > 6,000). The vignette experiment shows that threat framing lowers support for expanding high-skilled visa programs in both countries, while a competition-with-screening frame partially mitigates this decline by portraying foreign talent as a controllable strategic asset. The perceived channels differ across contexts: U.S. respondents react most strongly through national-security and technological-advantage concerns, whereas Chinese respondents react more through economic and labor-market concerns. The conjoint experiment shows that applicant selection is more stable. Across countries and framing conditions, respondents favor applicants with stronger host-country ties, higher expected income, and more favorable geopolitical alignment. These findings show that geopolitical rivalry does not simply close the door to skilled migration. Instead, it produces selective openness: citizens become more skeptical of expanding admissions overall while continuing to favor applicants who appear economically valuable, geopolitically aligned, and socially attached to the host country.',
   },
   {
-    title: 'Better Safe than Sorry: Sanctions and Firm Overcompliance',
-    description: 'Under Review',
-    coauthors: [{name: 'Eric Jeong', href: 'https://perryworldhouse.upenn.edu/fellows-and-affiliates/eric-jeong/'}],
-    abstract:
-      'Economic sanctions are a central instrument of economic statecraft, yet they can prompt firms to abandon trade that governments remain willing to permit. We develop a theory of precautionary overcompliance in which unequal access to credible political information shapes firms’ ability to infer the state’s enforcement resolve. When officials permit continued trade but their intentions remain uncertain, firms with weaker political standing may abandon activities beyond formal prohibitions. Better information can preserve commerce in this setting or encourage withdrawal when officials intend broader disengagement. We examine these implications using monthly Chinese customs records following North Korea’s 2006 nuclear test and subsequent UN sanctions. Comparing firms’ product-level exports to North Korea with exports to other destinations, we find that private firms withdraw more than state-owned enterprises (SOEs). This ownership gap persists after excluding products plausibly covered by formal sanctions and extends to food and humanitarian categories. Comparative cases of economic coercion involving China support the argument that clearer information about the government’s enforcement resolve can encourage SOEs to comply more fully with demands to withdraw from trade. Our argument explains how unequal political access within states shapes the international effects of economic statecraft.',
-    links: [{label: 'Paper (PDF)', href: '/Better_Safe_than_Sorry.pdf'}],
-  },
-  {
-    title: 'You Can Run But You Can’t Hide: How Firms Respond to Enhanced State Legibility in the Digital Age',
+    title: 'When States See More: Firm Political Responses under Expanding State Capacity',
     description: '',
     coauthors: [{name: 'Xiaobo Lü', href: 'https://www.xiaobolu.com/'}],
   },
@@ -82,6 +82,10 @@ const workInProgress: AcademicItem[] = [
   },
   {
     title: 'What Do We Talk About When We Talk About China',
+    description: '',
+  },
+  {
+    title: 'On Security-talking Elites',
     description: '',
   },
 ];
