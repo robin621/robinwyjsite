@@ -122,7 +122,7 @@ export const zhConferencePresentations =
   'GSIPE（伯克利，2025）、CPRP 2024、NEWEPS 2024、New Faces in Chinese Politics（2024）、VIPES 2024、MPSA 2024、APSA 2022-2025';
 
 export const zhProfessionalService =
-  '《美国政治科学评论》、《Comparative Political Studies》（CPS）及《China: An International Journal》匿名审稿人';
+  '《美国政治科学评论》及《China: An International Journal》匿名审稿人';
 
 export const zhLanguagesAndSkills = '普通话（母语）；R、Stata、Python、ArcGIS、LaTeX';
 

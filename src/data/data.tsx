@@ -134,7 +134,7 @@ export const conferencePresentations =
   'GSIPE (Berkeley 2025), CPRP 2024, NEWEPS 2024, New Faces in Chinese Politics (2024), VIPES 2024, MPSA 2024, APSA 2022-2025';
 
 export const professionalService =
-  'Reviewer for American Political Science Review, Comparative Political Studies (CPS), and China: An International Journal';
+  'Reviewer for American Political Science Review and China: An International Journal';
 
 export const languagesAndSkills = 'Mandarin Chinese (native); R, Stata, Python, ArcGIS, LaTeX';
 
